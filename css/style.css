@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@300;400;600&display=swap');
+
+html {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    max-width: 850px;
+    margin: auto;
+}
+
+h1 {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    vertical-align: middle;
+    padding: .4rem .2rem .2rem .2rem;
+    margin-top: 8.4rem;
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: .2rem;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(162, 121, 17);
+}
+
+a {
+    color: rgb(75, 118, 192);
+}
+
+main {
+    padding: 1rem;
+}
+
+#viewport {
+    height: 90vh;
+}
+
+#wrapper {
+    border: 2px solid rgb(244, 236, 156);
+}
+
+/* header */
+header {
+    background-image: url(../assets/Images/mike-petrucci-c9FQyqIECds-unsplash-cut.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    height: 200px;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Navigation */
+nav, footer {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: .2rem;
+    background-color: rgb(244, 236, 156);
+    padding:.2rem 0;
+    box-shadow: 0px 3px #888888;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: .2rem;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Construction */
+#construction {
+    background-image: url(../assets/Images/jon-tyson-XmMsdtiGSfo-unsplash.jpg);
+    background-size: cover;
+    height: 300px;
+}
+
+/* About Us */
+#aboutus #biography {
+    display: flex;
+    justify-content: center;
+}
+
+#aboutus table th {
+    background-color: antiquewhite;
+    padding: 0.5rem 0.4rem 0.3rem 0.4rem;
+}
+
+#aboutus table td {
+    border-bottom: 2px solid lightgrey;
+}
+
+#aboutus table tr td {
+    padding: 1rem;
+}
+
+#aboutus table tr td:nth-of-type(1) {
+    color: brown;
+    font-weight: bold;
+}
+
+#aboutus table tr td:nth-of-type(2) {
+    font-weight: bold;
+}
+
+/* Reference */
+#reference ul {
+    margin: 1rem;
+}

@@ -1,0 +1,23 @@
+Here below are the pros and cons of "Waterfall" and "Agile" models in the context of our project:
+"Waterfall"
+-- Pros:
+    - Heavy documentation makes it easy to maintain
+
+-- Cons:
+    - Project requirements unclear, can not complete a phase without knowing all information beforehand
+    - Team members roles are not interchangable
+    - Does not involve the client's opinions during project creation
+
+"Agile"
+-- Pros:
+    - Requirements are unclear, so using an adaptable model is perferred
+    - There are two deadlines in which we have to show our progress. Using an agile approach will enable us
+	to show progress to the customer
+    - Roles can be changed midway to use team members skills effectively
+    
+
+-- Cons:
+    - It is less predictable what the end product will be(due to changes midway)
+ 
+
+After discussing with teammates, we all think the "Agile" model is more suitable for our project. 

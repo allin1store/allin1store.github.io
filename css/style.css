@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,700&display=swap');
+
+html{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* header nav bar */
+header nav{
+    position: fixed;
+    top: 2px;
+    width: 100%;
+    display: flex;
+    font-size: xx-large;
+    background-color: rgba(255, 255, 255, 0.719);
+    padding:1rem 0 1rem 0;
+    justify-content: space-around;
+}
+header nav a{
+    margin-left: 2rem;
+}
+/* all links */
+a:active, a:visited, a:link, fa-envelope-o:hover{
+    color: rgb(127, 127, 127);
+    text-decoration: none;
+}
+a:hover, fa-envelope-o{
+    color: black;
+    text-decoration: underline;
+}
+span{
+    color: lightgray;
+    font-size: x-small;
+}
+/* About Us Page */
+#aboutUs ul{
+    list-style-type: none;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+#aboutUs ul li{
+    margin-bottom: 1rem;
+}
+#aboutUs h2{
+    padding-top: 2rem;
+}
+#aboutUsMain{
+    margin: auto;
+    width: 80%;
+    background-image:url("../assets/Images/puzzle-693873.jpg");
+}
+#aboutUs{
+    margin: auto;
+    width: 50%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+#temp{
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    background-image:url("../assets/Images/excavator-6954213.png");
+    background-position: center;
+    background-size: cover;
+}
+#timer_container_text{
+    margin-bottom: 0.5rem;
+    font-size: 5rem;
+  
+}
+#timer_container_time{
+    margin-top: 0;
+    font-size: 5rem;
+    
+}
+#timer_container{
+    color: rgb(255, 196, 0);
+    font-weight: bolder;
+    margin: auto;
+    width: 50%;
+    position: fixed;
+    bottom:0;
+}

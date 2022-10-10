@@ -17,6 +17,8 @@ import Reference from './Reference.js';
 import Home from './Home.js';
 import Payment from './Payment.js';
 import Product from './Product.js';
+import Category from './Category.js';
+
 
 const App = props => {
 
@@ -86,6 +88,7 @@ const App = props => {
                     :chosenPage == "createAccount" ? <CreateAccount handleChosenPage={handleChosenPage}/>
                     :chosenPage == "paymentPage" ? <Payment handleChosenPage={handleChosenPage}/>
                     :chosenPage == "productPage" ? <Product handleChosenPage={handleChosenPage}/>
+                    :chosenPage == "categoryPage" ? <Category handleChosenPage={handleChosenPage}/>
                     :<Home  handleChosenPage={handleChosenPage}/>}
 
                 </div>

@@ -108,7 +108,7 @@ nav a:hover {
 }
 
 /* body */
-body{
+.body, body{
     display: flex;
     width: 850px;
     margin: auto;
@@ -155,4 +155,10 @@ body{
 /* Product */
 #productPhoto, #productName{
     cursor: pointer;
+}
+/* Button */
+.btn{
+    padding: .3rem;
+    margin: .3rem;
+    font-size: medium;
 }

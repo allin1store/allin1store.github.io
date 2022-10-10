@@ -1,10 +1,12 @@
 import React from 'react';
 // to do:
 // 1. show product name (provide a link to Product.js), price, picture, description 
-// 2. "add to cart" button -> pop up a message after added to cart
+// 2. "add to cart" button -> pop up a message after added to the cart
 // 3. "buy now" button -> Payment.js (optional?)
 // 4. price comparsion table
-//      a. product name, price, store name (provide a link?)
+//      a. store name (provide a link?), price
+//      b. highlight the lowest price
+//      c. "add to cart" button under our price -> pop up a message after added to the cart
 
 const Product = props => {
     

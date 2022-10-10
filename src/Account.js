@@ -7,7 +7,7 @@ import React from 'react';
 //      b. order status
 //      c. products and quantity
 //      d. shipping details (name, address)
-// 3. allow user to edit their profile (optional?)
+// 3. a "modify" button: allow user to edit their profile (optional?)
 //      a. email
 //      b. phone number
 //      c. password
@@ -29,6 +29,7 @@ const Account = props => {
                         <li id="userFirstLastName">First Last Name</li>
                         <li id="userAddress">Address</li>
                         <li id="orders">Active or completed orders</li>
+                        <li id="modify">Modify button</li>
                         <li id="logout">Logout button</li>
                     </ul>
                     

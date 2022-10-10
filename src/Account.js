@@ -12,6 +12,7 @@ import React from 'react';
 //      b. phone number
 //      c. password
 //      d. address
+// 4. "log out" button -> Home.js
 
 const Account = props => {
     
@@ -28,6 +29,7 @@ const Account = props => {
                         <li id="userFirstLastName">First Last Name</li>
                         <li id="userAddress">Address</li>
                         <li id="orders">Active or completed orders</li>
+                        <li id="logout">Logout button</li>
                     </ul>
                     
                 </div>

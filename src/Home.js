@@ -5,8 +5,8 @@ import React from 'react';
 //   b. the product name (link to the Product.js)
 //   c. product price (link to the Product.js)
 // 2. display a list of category names, including:
-//   a. a picture
-//   b. category name
+//   a. a picture (link to the Category.js)
+//   b. category name (link to the Category.js)
 
 const Home = props => {
     
@@ -27,8 +27,8 @@ const Home = props => {
                     {/* to do*/}
                     <h3>Shop by category</h3>
                     <ul>
-                        <li id="categoryPhoto">category photo</li>
-                        <li id="categoryName">category name</li>
+                        <li id="categoryPhoto" onClick={()=>props.handleChosenPage('categoryPage')}>category photo</li>
+                        <li id="categoryName" onClick={()=>{props.handleChosenPage('categoryPage')}}>category name</li>
                         
                     </ul>
 

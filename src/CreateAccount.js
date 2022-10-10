@@ -1,7 +1,7 @@
 import React from 'react';
 
 // to do:
-// 1. create a form to get user informations(user name, name, email, phone number)
+// 1. a form to get user informations(user name, name, email, phone number, address)
 // 2. verify the inputs (optional?)
 // 3. show created account
 // 4. a button "Shop Now" -> Home.js
@@ -38,8 +38,8 @@ const CreateAccount = props => {
                                 </label><br/><br/>
         
                                 {/* function to be completed... */}
-                                <button onClick={()=>functionNeeded()}>Create</button>
-                                <button type={"reset"} onClick={()=>functionNeeded()}>Reset</button>
+                                <button className="btn" onClick={()=>functionNeeded()}>Create</button>
+                                <button className="btn" type={"reset"} onClick={()=>functionNeededtoClearStates()}>Reset</button>
                         </fieldset>
                     </form>
                 </div>

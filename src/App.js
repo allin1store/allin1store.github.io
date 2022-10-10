@@ -6,11 +6,9 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faCartShopping, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 
-
-
 // Files
 import Search from './Search.js';
-import User from './User.js';
+import Account from './Account.js';
 import Login from './Login.js';
 import CreateAccount from './CreateAccount.js';
 import ShoppingCart from './ShoppingCart.js';
@@ -28,9 +26,7 @@ const App = props => {
         setChosenPage(page);
     };
 
-
-    // temp home page only
-    // use the Home.js to render the updated home page
+    // temp home page created by Yenny
     const homePage = (<div className="wrapper">
 
                         <main>
@@ -59,7 +55,7 @@ const App = props => {
                 <div className="searchBar">
                     <form>
                         <input type="search" name="search" placeholder='Search All In One Store'></input>
-                        <span class="searchBtn" onClick={()=>{setChosenPage("searchPage")}}> {<FontAwesomeIcon icon={faMagnifyingGlass} />}</span>
+                        <span className="searchBtn" onClick={()=>{setChosenPage("searchPage")}}> {<FontAwesomeIcon icon={faMagnifyingGlass} />}</span>
                     </form>
                 </div>
                 <ul>
@@ -70,7 +66,7 @@ const App = props => {
                 </ul>
             </div>
 
-            <body>
+            <div className="body">
                 <nav className='verticalNav'>
                     <ul>
                         <li> <a onClick={()=>{setChosenPage("homePage")}}>Home </a></li>
@@ -80,13 +76,13 @@ const App = props => {
                 </nav>
 
                 <div>
-                    {/* After updating the Home.js, change "homePage" to <Home/> on line 72*/}
+
                     {chosenPage == "aboutUsPage"? <AboutUs/>
                     :chosenPage == "referencePage"? <Reference/> 
                     :chosenPage == "login"? <Login handleChosenPage={handleChosenPage}/>
                     :chosenPage == "shoppingCartPage"? <ShoppingCart  handleChosenPage={handleChosenPage}/>
                     :chosenPage == "searchPage" ? <Search handleChosenPage={handleChosenPage}/>
-                    :chosenPage == "userPage" ? <User handleChosenPage={handleChosenPage}/> 
+                    :chosenPage == "accountPage" ? <Account handleChosenPage={handleChosenPage}/> 
                     :chosenPage == "createAccount" ? <CreateAccount handleChosenPage={handleChosenPage}/>
                     :chosenPage == "paymentPage" ? <Payment handleChosenPage={handleChosenPage}/>
                     :chosenPage == "productPage" ? <Product handleChosenPage={handleChosenPage}/>
@@ -94,7 +90,7 @@ const App = props => {
 
                 </div>
 
-            </body>
+            </div>
             
             
             

@@ -5,7 +5,7 @@ import React from 'react';
 //      a. display a message
 //      b. render a button "Shop Now" -> Home.js
 // 2. display selected items, price, quantity
-//      a. product name -> Product.js
+//      a. click on product name -> Product.js
 // 3. add or remove items
 // 4. "continue to checkout" button -> Payment.js
 
@@ -25,7 +25,7 @@ const ShoppingCart = props => {
                         <li id="subtotal">Subtotal</li>
                     </ul>
 
-                    <button onClick={()=>props.handleChosenPage('paymentPage')}>Buy Now</button>
+                    <button className="btn" onClick={()=>props.handleChosenPage('paymentPage')}>Buy Now</button>
 
                 </div>
             </section>

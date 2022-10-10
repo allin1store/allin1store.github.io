@@ -1,13 +1,14 @@
 import React from 'react';
 
 // to do:
-// 1. get shipment details
+// 1. get shipping details
 // 2. get payment
 //      a. methods
 //      b. card details
 // 3. submit button
-//      a. succcessful page (show order number, items, quantity, receipt)
+//      a. succcessful page (show order number, items, quantity, receipt, shipping details)
 //      b. failure page(optional?)
+// 4. (optional?) user login to get the shipping details
 
 const Payment = props => {
 
@@ -56,8 +57,8 @@ const Payment = props => {
                     {paymentDetails}
         
                     {/* function to be completed... */}
-                    <button onClick={()=>functionNeeded()}>Pay</button>
-                    <button onClick={()=>functionNeeded()}>Reset</button>
+                    <button className="btn"  onClick={()=>functionNeeded()}>Pay</button>
+                    
                 </div>
             </section>
         </main>

@@ -11627,6 +11627,55 @@ var AboutUs = function AboutUs(props) {
 
 /***/ }),
 
+/***/ "./src/Account.js":
+/*!************************!*\
+  !*** ./src/Account.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+ // to do: 
+// 1. display user information (user name, name, email, phone number, address)
+// 2. order records
+//      a. order numbers
+//      b. order status
+//      c. products and quantity
+//      d. shipping details (name, address)
+// 3. allow user to edit their profile (optional?)
+//      a. email
+//      b. phone number
+//      c. password
+//      d. address
+
+var Account = function Account(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    id: "account"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Account Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    id: "userName"
+  }, "User Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    id: "userEmail"
+  }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    id: "userFirstLastName"
+  }, "First Last Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    id: "userAddress"
+  }, "Address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    id: "orders"
+  }, "Active or completed orders"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, "\xA0"));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Account);
+
+/***/ }),
+
 /***/ "./src/App.js":
 /*!********************!*\
   !*** ./src/App.js ***!
@@ -11642,7 +11691,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.mjs");
 /* harmony import */ var _Search_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Search.js */ "./src/Search.js");
-/* harmony import */ var _User_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./User.js */ "./src/User.js");
+/* harmony import */ var _Account_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Account.js */ "./src/Account.js");
 /* harmony import */ var _Login_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Login.js */ "./src/Login.js");
 /* harmony import */ var _CreateAccount_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CreateAccount.js */ "./src/CreateAccount.js");
 /* harmony import */ var _ShoppingCart_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ShoppingCart.js */ "./src/ShoppingCart.js");
@@ -11689,8 +11738,7 @@ var App = function App(props) {
 
   var handleChosenPage = function handleChosenPage(page) {
     setChosenPage(page);
-  }; // temp home page only
-  // use the Home.js to render the updated home page
+  }; // temp home page created by Yenny
 
 
   var homePage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -11711,7 +11759,7 @@ var App = function App(props) {
     name: "search",
     placeholder: "Search All In One Store"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    "class": "searchBtn",
+    className: "searchBtn",
     onClick: function onClick() {
       setChosenPage("searchPage");
     }
@@ -11729,7 +11777,9 @@ var App = function App(props) {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faCartShopping
-  }), "Cart")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("body", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
+  }), "Cart")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "verticalNav"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     onClick: function onClick() {
@@ -11749,7 +11799,7 @@ var App = function App(props) {
     handleChosenPage: handleChosenPage
   }) : chosenPage == "searchPage" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Search_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     handleChosenPage: handleChosenPage
-  }) : chosenPage == "userPage" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_User_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }) : chosenPage == "accountPage" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Account_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
     handleChosenPage: handleChosenPage
   }) : chosenPage == "createAccount" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CreateAccount_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     handleChosenPage: handleChosenPage
@@ -11779,7 +11829,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
  // to do:
-// 1. create a form to get user informations(user name, name, email, phone number)
+// 1. a form to get user informations(user name, name, email, phone number, address)
 // 2. verify the inputs (optional?)
 // 3. show created account
 // 4. a button "Shop Now" -> Home.js
@@ -11839,13 +11889,15 @@ var CreateAccount = function CreateAccount(props) {
     },
     required: true
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "btn",
     onClick: function onClick() {
       return functionNeeded();
     }
   }, "Create"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "btn",
     type: "reset",
     onClick: function onClick() {
-      return functionNeeded();
+      return functionNeededtoClearStates();
     }
   }, "Reset")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, "\xA0"));
 };
@@ -11922,6 +11974,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
  // to do: 
 // 1. verify user login data (optional?)
+//      after verification -> Account.js
 
 var Login = function Login(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -11945,10 +11998,12 @@ var Login = function Login(props) {
     name: "userPassword",
     required: true
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "btn",
     onClick: function onClick() {
-      return props.handleChosenPage('userPage');
+      return props.handleChosenPage('accountPage');
     }
   }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "btn",
     onClick: function onClick() {
       return props.handleChosenPage('createAccount');
     }
@@ -11972,13 +12027,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
  // to do:
-// 1. get shipment details
+// 1. get shipping details
 // 2. get payment
 //      a. methods
 //      b. card details
 // 3. submit button
-//      a. succcessful page (show order number, items, quantity, receipt)
+//      a. succcessful page (show order number, items, quantity, receipt, shipping details)
 //      b. failure page(optional?)
+// 4. (optional?) user login to get the shipping details
 
 var Payment = function Payment(props) {
   var shippingDetails = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("legend", null, "Shipping Details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "User Name:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
@@ -12040,14 +12096,11 @@ var Payment = function Payment(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Payment"), shippingDetails, paymentDetails, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "btn",
     onClick: function onClick() {
       return functionNeeded();
     }
-  }, "Pay"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    onClick: function onClick() {
-      return functionNeeded();
-    }
-  }, "Reset")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, "\xA0"));
+  }, "Pay")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, "\xA0"));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Payment);
@@ -12068,10 +12121,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
  // to do:
 // 1. show product name (provide a link to Product.js), price, picture, description 
-// 2. "add to cart" button -> pop up a message after added to cart
+// 2. "add to cart" button -> pop up a message after added to the cart
 // 3. "buy now" button -> Payment.js (optional?)
 // 4. price comparsion table
-//      a. product name, price, store name (provide a link?)
+//      a. store name (provide a link?), price
+//      b. highlight the lowest price
+//      c. "add to cart" button under our price -> pop up a message after added to the cart
 
 var Product = function Product(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -12203,7 +12258,7 @@ __webpack_require__.r(__webpack_exports__);
 //      a. display a message
 //      b. render a button "Shop Now" -> Home.js
 // 2. display selected items, price, quantity
-//      a. product name -> Product.js
+//      a. click on product name -> Product.js
 // 3. add or remove items
 // 4. "continue to checkout" button -> Payment.js
 
@@ -12226,6 +12281,7 @@ var ShoppingCart = function ShoppingCart(props) {
   }, "Quantity"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     id: "subtotal"
   }, "Subtotal")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "btn",
     onClick: function onClick() {
       return props.handleChosenPage('paymentPage');
     }
@@ -12233,55 +12289,6 @@ var ShoppingCart = function ShoppingCart(props) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ShoppingCart);
-
-/***/ }),
-
-/***/ "./src/User.js":
-/*!*********************!*\
-  !*** ./src/User.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
- // to do: 
-// 1. display user information (user name, name, email, phone number, address)
-// 2. order records
-//      a. order numbers
-//      b. order status
-//      c. products and quantity
-//      d. shipping details (name, address)
-// 3. allow user to edit their profile (optional?)
-//      a. email
-//      b. phone number
-//      c. password
-//      d. address
-
-var User = function User(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    id: "user"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "User Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    id: "userName"
-  }, "User Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    id: "userEmail"
-  }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    id: "userFirstLastName"
-  }, "First Last Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    id: "userAddress"
-  }, "Address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    id: "orders"
-  }, "Active or completed orders"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, "\xA0"));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (User);
 
 /***/ }),
 
@@ -12313,7 +12320,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.c
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html {\n    font-family: \"Josefin Sans\", sans-serif;\n}\n\nh1 {\n    width: 100%;\n    background-color: rgba(0, 0, 0, .5);\n    color: white;\n    vertical-align: middle;\n    padding: .4rem .2rem .2rem .2rem;\n    margin-top: 8.4rem;\n}\n\nh2 {\n    font-family: \"Bebas Neue\", sans-serif;\n    letter-spacing: .2rem;\n}\n\nh3 {\n    font-family: Arial, Helvetica, sans-serif;\n    color:rgb(162, 121, 17);\n}\n\na {\n    color: rgb(75, 118, 192);\n}\n\nmain {\n    padding: 1rem;\n}\n\n#viewport {\n    height: 90vh;\n}\n\n.wrapper {\n    border: 2px solid rgb(244, 236, 156);\n    width: 750px;\n    margin-bottom: 3rem;\n    box-shadow: 0px 3px #888888;\n    margin-bottom: 3rem;\n}\n\n/* header */\nheader {\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n    box-sizing: border-box;\n    height: 200px;\n    padding: 1rem;\n    position: relative;\n}\n\n/* Navigation */\nnav {\n    font-family: \"Bebas Neue\", sans-serif;\n    font-weight: bold;\n    font-size: large;\n    letter-spacing: .2rem;\n    background-color: rgb(244, 236, 156);\n    padding:.2rem 0;\n    box-shadow: 0px 3px #888888;\n    margin-bottom: 3rem;\n}\n\nnav ul {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    padding: 0;\n    margin: 0;\n}\n\nnav ul li {\n    list-style-type: none;\n    padding: .2rem;\n}\n\nnav a {\n    color: black;\n    text-decoration: none;\n}\nnav a:hover {\n    cursor: pointer;\n}\n/* horizontal nav */\n.horizontalNav{\n    display: flex;\n    justify-content: space-between;\n}\n.horizontalNav ul li{\n    list-style-type: none;\n    padding: .2rem;\n    cursor: pointer;\n}\n.horizontalNav ul{\n    display: flex;\n    justify-content: end;\n}\n/* Search bar */\n.searchBar{\n    padding-top: 1rem;\n}\n.searchBtn{\n    cursor: pointer;\n}\n\n/* body */\nbody{\n    display: flex;\n    width: 850px;\n    margin: auto;\n}\n/* Construction */\n#construction {\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n    background-size: cover;\n    height: 300px;\n}\n\n/* About Us */\n#aboutus #biography {\n    display: flex;\n    justify-content: center;\n}\n\n#aboutus table th {\n    background-color: antiquewhite;\n    padding: 0.5rem 0.4rem 0.3rem 0.4rem;\n}\n\n#aboutus table td {\n    border-bottom: 2px solid lightgrey;\n}\n\n#aboutus table tr td {\n    padding: 1rem;\n}\n\n#aboutus table tr td:nth-of-type(1) {\n    color: brown;\n    font-weight: bold;\n}\n\n#aboutus table tr td:nth-of-type(2) {\n    font-weight: bold;\n}\n\n/* Reference */\n#reference ul {\n    margin: 1rem;\n}\n/* Product */\n#productPhoto, #productName{\n    cursor: pointer;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,WAAW;IACX,mCAAmC;IACnC,YAAY;IACZ,sBAAsB;IACtB,gCAAgC;IAChC,kBAAkB;AACtB;;AAEA;IACI,qCAAqC;IACrC,qBAAqB;AACzB;;AAEA;IACI,yCAAyC;IACzC,uBAAuB;AAC3B;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,oCAAoC;IACpC,YAAY;IACZ,mBAAmB;IACnB,2BAA2B;IAC3B,mBAAmB;AACvB;;AAEA,WAAW;AACX;IACI,yDAAkF;IAClF,sBAAsB;IACtB,sBAAsB;IACtB,aAAa;IACb,aAAa;IACb,kBAAkB;AACtB;;AAEA,eAAe;AACf;IACI,qCAAqC;IACrC,iBAAiB;IACjB,gBAAgB;IAChB,qBAAqB;IACrB,oCAAoC;IACpC,eAAe;IACf,2BAA2B;IAC3B,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,6BAA6B;IAC7B,UAAU;IACV,SAAS;AACb;;AAEA;IACI,qBAAqB;IACrB,cAAc;AAClB;;AAEA;IACI,YAAY;IACZ,qBAAqB;AACzB;AACA;IACI,eAAe;AACnB;AACA,mBAAmB;AACnB;IACI,aAAa;IACb,8BAA8B;AAClC;AACA;IACI,qBAAqB;IACrB,cAAc;IACd,eAAe;AACnB;AACA;IACI,aAAa;IACb,oBAAoB;AACxB;AACA,eAAe;AACf;IACI,iBAAiB;AACrB;AACA;IACI,eAAe;AACnB;;AAEA,SAAS;AACT;IACI,aAAa;IACb,YAAY;IACZ,YAAY;AAChB;AACA,iBAAiB;AACjB;IACI,yDAA0E;IAC1E,sBAAsB;IACtB,aAAa;AACjB;;AAEA,aAAa;AACb;IACI,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,8BAA8B;IAC9B,oCAAoC;AACxC;;AAEA;IACI,kCAAkC;AACtC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA,cAAc;AACd;IACI,YAAY;AAChB;AACA,YAAY;AACZ;IACI,eAAe;AACnB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@300;400;600&display=swap');\n\nhtml {\n    font-family: \"Josefin Sans\", sans-serif;\n}\n\nh1 {\n    width: 100%;\n    background-color: rgba(0, 0, 0, .5);\n    color: white;\n    vertical-align: middle;\n    padding: .4rem .2rem .2rem .2rem;\n    margin-top: 8.4rem;\n}\n\nh2 {\n    font-family: \"Bebas Neue\", sans-serif;\n    letter-spacing: .2rem;\n}\n\nh3 {\n    font-family: Arial, Helvetica, sans-serif;\n    color:rgb(162, 121, 17);\n}\n\na {\n    color: rgb(75, 118, 192);\n}\n\nmain {\n    padding: 1rem;\n}\n\n#viewport {\n    height: 90vh;\n}\n\n.wrapper {\n    border: 2px solid rgb(244, 236, 156);\n    width: 750px;\n    margin-bottom: 3rem;\n    box-shadow: 0px 3px #888888;\n    margin-bottom: 3rem;\n}\n\n/* header */\nheader {\n    background-image: url(../assets/Images/mike-petrucci-c9FQyqIECds-unsplash-cut.jpg);\n    background-size: cover;\n    box-sizing: border-box;\n    height: 200px;\n    padding: 1rem;\n    position: relative;\n}\n\n/* Navigation */\nnav {\n    font-family: \"Bebas Neue\", sans-serif;\n    font-weight: bold;\n    font-size: large;\n    letter-spacing: .2rem;\n    background-color: rgb(244, 236, 156);\n    padding:.2rem 0;\n    box-shadow: 0px 3px #888888;\n    margin-bottom: 3rem;\n}\n\nnav ul {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    padding: 0;\n    margin: 0;\n}\n\nnav ul li {\n    list-style-type: none;\n    padding: .2rem;\n}\n\nnav a {\n    color: black;\n    text-decoration: none;\n}\nnav a:hover {\n    cursor: pointer;\n}\n/* horizontal nav */\n.horizontalNav{\n    display: flex;\n    justify-content: space-between;\n}\n.horizontalNav ul li{\n    list-style-type: none;\n    padding: .2rem;\n    cursor: pointer;\n}\n.horizontalNav ul{\n    display: flex;\n    justify-content: end;\n}\n/* Search bar */\n.searchBar{\n    padding-top: 1rem;\n}\n.searchBtn{\n    cursor: pointer;\n}\n\n/* body */\nbody{\n    display: flex;\n    width: 850px;\n    margin: auto;\n}\n/* Construction */\n#construction {\n    background-image: url(../assets/Images/jon-tyson-XmMsdtiGSfo-unsplash.jpg);\n    background-size: cover;\n    height: 300px;\n}\n\n/* About Us */\n#aboutus #biography {\n    display: flex;\n    justify-content: center;\n}\n\n#aboutus table th {\n    background-color: antiquewhite;\n    padding: 0.5rem 0.4rem 0.3rem 0.4rem;\n}\n\n#aboutus table td {\n    border-bottom: 2px solid lightgrey;\n}\n\n#aboutus table tr td {\n    padding: 1rem;\n}\n\n#aboutus table tr td:nth-of-type(1) {\n    color: brown;\n    font-weight: bold;\n}\n\n#aboutus table tr td:nth-of-type(2) {\n    font-weight: bold;\n}\n\n/* Reference */\n#reference ul {\n    margin: 1rem;\n}\n/* Product */\n#productPhoto, #productName{\n    cursor: pointer;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\r\n    font-family: \"Josefin Sans\", sans-serif;\r\n}\r\n\r\nh1 {\r\n    width: 100%;\r\n    background-color: rgba(0, 0, 0, .5);\r\n    color: white;\r\n    vertical-align: middle;\r\n    padding: .4rem .2rem .2rem .2rem;\r\n    margin-top: 8.4rem;\r\n}\r\n\r\nh2 {\r\n    font-family: \"Bebas Neue\", sans-serif;\r\n    letter-spacing: .2rem;\r\n}\r\n\r\nh3 {\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    color:rgb(162, 121, 17);\r\n}\r\n\r\na {\r\n    color: rgb(75, 118, 192);\r\n}\r\n\r\nmain {\r\n    padding: 1rem;\r\n}\r\n\r\n#viewport {\r\n    height: 90vh;\r\n}\r\n\r\n.wrapper {\r\n    border: 2px solid rgb(244, 236, 156);\r\n    width: 750px;\r\n    margin-bottom: 3rem;\r\n    box-shadow: 0px 3px #888888;\r\n    margin-bottom: 3rem;\r\n}\r\n\r\n/* header */\r\nheader {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    box-sizing: border-box;\r\n    height: 200px;\r\n    padding: 1rem;\r\n    position: relative;\r\n}\r\n\r\n/* Navigation */\r\nnav {\r\n    font-family: \"Bebas Neue\", sans-serif;\r\n    font-weight: bold;\r\n    font-size: large;\r\n    letter-spacing: .2rem;\r\n    background-color: rgb(244, 236, 156);\r\n    padding:.2rem 0;\r\n    box-shadow: 0px 3px #888888;\r\n    margin-bottom: 3rem;\r\n}\r\n\r\nnav ul {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\nnav ul li {\r\n    list-style-type: none;\r\n    padding: .2rem;\r\n}\r\n\r\nnav a {\r\n    color: black;\r\n    text-decoration: none;\r\n}\r\nnav a:hover {\r\n    cursor: pointer;\r\n}\r\n/* horizontal nav */\r\n.horizontalNav{\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n.horizontalNav ul li{\r\n    list-style-type: none;\r\n    padding: .2rem;\r\n    cursor: pointer;\r\n}\r\n.horizontalNav ul{\r\n    display: flex;\r\n    justify-content: end;\r\n}\r\n/* Search bar */\r\n.searchBar{\r\n    padding-top: 1rem;\r\n}\r\n.searchBtn{\r\n    cursor: pointer;\r\n}\r\n\r\n/* body */\r\n.body, body{\r\n    display: flex;\r\n    width: 850px;\r\n    margin: auto;\r\n}\r\n/* Construction */\r\n#construction {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n    background-size: cover;\r\n    height: 300px;\r\n}\r\n\r\n/* About Us */\r\n#aboutus #biography {\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n\r\n#aboutus table th {\r\n    background-color: antiquewhite;\r\n    padding: 0.5rem 0.4rem 0.3rem 0.4rem;\r\n}\r\n\r\n#aboutus table td {\r\n    border-bottom: 2px solid lightgrey;\r\n}\r\n\r\n#aboutus table tr td {\r\n    padding: 1rem;\r\n}\r\n\r\n#aboutus table tr td:nth-of-type(1) {\r\n    color: brown;\r\n    font-weight: bold;\r\n}\r\n\r\n#aboutus table tr td:nth-of-type(2) {\r\n    font-weight: bold;\r\n}\r\n\r\n/* Reference */\r\n#reference ul {\r\n    margin: 1rem;\r\n}\r\n/* Product */\r\n#productPhoto, #productName{\r\n    cursor: pointer;\r\n}\r\n/* Button */\r\n.btn{\r\n    padding: .3rem;\r\n    margin: .3rem;\r\n    font-size: medium;\r\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,WAAW;IACX,mCAAmC;IACnC,YAAY;IACZ,sBAAsB;IACtB,gCAAgC;IAChC,kBAAkB;AACtB;;AAEA;IACI,qCAAqC;IACrC,qBAAqB;AACzB;;AAEA;IACI,yCAAyC;IACzC,uBAAuB;AAC3B;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,oCAAoC;IACpC,YAAY;IACZ,mBAAmB;IACnB,2BAA2B;IAC3B,mBAAmB;AACvB;;AAEA,WAAW;AACX;IACI,yDAAkF;IAClF,sBAAsB;IACtB,sBAAsB;IACtB,aAAa;IACb,aAAa;IACb,kBAAkB;AACtB;;AAEA,eAAe;AACf;IACI,qCAAqC;IACrC,iBAAiB;IACjB,gBAAgB;IAChB,qBAAqB;IACrB,oCAAoC;IACpC,eAAe;IACf,2BAA2B;IAC3B,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,6BAA6B;IAC7B,UAAU;IACV,SAAS;AACb;;AAEA;IACI,qBAAqB;IACrB,cAAc;AAClB;;AAEA;IACI,YAAY;IACZ,qBAAqB;AACzB;AACA;IACI,eAAe;AACnB;AACA,mBAAmB;AACnB;IACI,aAAa;IACb,8BAA8B;AAClC;AACA;IACI,qBAAqB;IACrB,cAAc;IACd,eAAe;AACnB;AACA;IACI,aAAa;IACb,oBAAoB;AACxB;AACA,eAAe;AACf;IACI,iBAAiB;AACrB;AACA;IACI,eAAe;AACnB;;AAEA,SAAS;AACT;IACI,aAAa;IACb,YAAY;IACZ,YAAY;AAChB;AACA,iBAAiB;AACjB;IACI,yDAA0E;IAC1E,sBAAsB;IACtB,aAAa;AACjB;;AAEA,aAAa;AACb;IACI,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,8BAA8B;IAC9B,oCAAoC;AACxC;;AAEA;IACI,kCAAkC;AACtC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;AACrB;;AAEA,cAAc;AACd;IACI,YAAY;AAChB;AACA,YAAY;AACZ;IACI,eAAe;AACnB;AACA,WAAW;AACX;IACI,cAAc;IACd,aAAa;IACb,iBAAiB;AACrB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@300;400;600&display=swap');\r\n\r\nhtml {\r\n    font-family: \"Josefin Sans\", sans-serif;\r\n}\r\n\r\nh1 {\r\n    width: 100%;\r\n    background-color: rgba(0, 0, 0, .5);\r\n    color: white;\r\n    vertical-align: middle;\r\n    padding: .4rem .2rem .2rem .2rem;\r\n    margin-top: 8.4rem;\r\n}\r\n\r\nh2 {\r\n    font-family: \"Bebas Neue\", sans-serif;\r\n    letter-spacing: .2rem;\r\n}\r\n\r\nh3 {\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    color:rgb(162, 121, 17);\r\n}\r\n\r\na {\r\n    color: rgb(75, 118, 192);\r\n}\r\n\r\nmain {\r\n    padding: 1rem;\r\n}\r\n\r\n#viewport {\r\n    height: 90vh;\r\n}\r\n\r\n.wrapper {\r\n    border: 2px solid rgb(244, 236, 156);\r\n    width: 750px;\r\n    margin-bottom: 3rem;\r\n    box-shadow: 0px 3px #888888;\r\n    margin-bottom: 3rem;\r\n}\r\n\r\n/* header */\r\nheader {\r\n    background-image: url(../assets/Images/mike-petrucci-c9FQyqIECds-unsplash-cut.jpg);\r\n    background-size: cover;\r\n    box-sizing: border-box;\r\n    height: 200px;\r\n    padding: 1rem;\r\n    position: relative;\r\n}\r\n\r\n/* Navigation */\r\nnav {\r\n    font-family: \"Bebas Neue\", sans-serif;\r\n    font-weight: bold;\r\n    font-size: large;\r\n    letter-spacing: .2rem;\r\n    background-color: rgb(244, 236, 156);\r\n    padding:.2rem 0;\r\n    box-shadow: 0px 3px #888888;\r\n    margin-bottom: 3rem;\r\n}\r\n\r\nnav ul {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\nnav ul li {\r\n    list-style-type: none;\r\n    padding: .2rem;\r\n}\r\n\r\nnav a {\r\n    color: black;\r\n    text-decoration: none;\r\n}\r\nnav a:hover {\r\n    cursor: pointer;\r\n}\r\n/* horizontal nav */\r\n.horizontalNav{\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n.horizontalNav ul li{\r\n    list-style-type: none;\r\n    padding: .2rem;\r\n    cursor: pointer;\r\n}\r\n.horizontalNav ul{\r\n    display: flex;\r\n    justify-content: end;\r\n}\r\n/* Search bar */\r\n.searchBar{\r\n    padding-top: 1rem;\r\n}\r\n.searchBtn{\r\n    cursor: pointer;\r\n}\r\n\r\n/* body */\r\n.body, body{\r\n    display: flex;\r\n    width: 850px;\r\n    margin: auto;\r\n}\r\n/* Construction */\r\n#construction {\r\n    background-image: url(../assets/Images/jon-tyson-XmMsdtiGSfo-unsplash.jpg);\r\n    background-size: cover;\r\n    height: 300px;\r\n}\r\n\r\n/* About Us */\r\n#aboutus #biography {\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n\r\n#aboutus table th {\r\n    background-color: antiquewhite;\r\n    padding: 0.5rem 0.4rem 0.3rem 0.4rem;\r\n}\r\n\r\n#aboutus table td {\r\n    border-bottom: 2px solid lightgrey;\r\n}\r\n\r\n#aboutus table tr td {\r\n    padding: 1rem;\r\n}\r\n\r\n#aboutus table tr td:nth-of-type(1) {\r\n    color: brown;\r\n    font-weight: bold;\r\n}\r\n\r\n#aboutus table tr td:nth-of-type(2) {\r\n    font-weight: bold;\r\n}\r\n\r\n/* Reference */\r\n#reference ul {\r\n    margin: 1rem;\r\n}\r\n/* Product */\r\n#productPhoto, #productName{\r\n    cursor: pointer;\r\n}\r\n/* Button */\r\n.btn{\r\n    padding: .3rem;\r\n    margin: .3rem;\r\n    font-size: medium;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

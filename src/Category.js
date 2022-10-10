@@ -5,6 +5,7 @@ import React from 'react';
 //    a. picture and name, link to the prouct
 //    b. pagination at the top and the bottom
 //    c. "show more" button at the bottom
+// 2. all categories menu on the top/right for user to change category
 
 const Category = props => {
 

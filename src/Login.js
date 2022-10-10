@@ -2,7 +2,6 @@ import React from 'react';
 
 // to do: 
 // 1. verify user login data (optional?)
-//      after verification -> Account.js
 
 const Login = props => {
     
@@ -19,8 +18,8 @@ const Login = props => {
                         <input type={"password"} id="lnauserPasswordme" name="userPassword" required></input>
                                               
                     </form>
-                    <button className="btn" onClick={()=>props.handleChosenPage('accountPage')}>Login</button>  
-                    <button className="btn" onClick={()=>props.handleChosenPage('createAccount')}>Sign up</button>
+                    <button onClick={()=>props.handleChosenPage('userPage')}>Login</button>  
+                    <button onClick={()=>props.handleChosenPage('createAccount')}>Sign up</button>
                 </div>
             </section>
         </main>

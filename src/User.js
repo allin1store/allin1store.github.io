@@ -13,14 +13,14 @@ import React from 'react';
 //      c. password
 //      d. address
 
-const Account = props => {
+const User = props => {
     
     return (
         <div className="wrapper">
             <main>
-            <section id="account">
+            <section id="user">
                 <div className="text">
-                    <h2>Account Page</h2>
+                    <h2>User Page</h2>
                     {/* to do*/}
                     <ul>
                         <li id="userName">User Name</li>
@@ -38,4 +38,4 @@ const Account = props => {
         )
 };
 
-export default Account;
+export default User;

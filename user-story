@@ -1,0 +1,30 @@
+
+As a customer
+•	I want to view a product with details so that I can decide whether to purchase it or not.
+•	I want to compare a product’s price from the different websites so that I know I have a good deal.
+•	I want to create an account to save my profile, shipping details, and card details so that I can complete an order without the need to  type my details every time.
+•	I want to change my account details so that my data is up to date.
+•	I want to log in to view my order history so that I understand my shopping habit.
+•	I want to log in to track my order status so I can anticipate the date of getting my order.
+•	I want to put a product into the shopping cart so that I can pay for it when I am ready to.
+•	I want to update or empty the cart before I pay so that I can change the item quantity or the items in the cart.
+•	I want to choose different payment methods so that I have more choices to pay for my order.
+
+As a supplier
+•	I want to log in to my account so that I can update the new products.
+
+As an APIs service provider
+•	I want to provide an APIs including the details of products from a website so that the user can get some specific information that they want.
+
+As a bank service provider
+•	I want to provide payment services to the user so that the user can use our banking service.
+•	I want to verify the card details before I approve a payment so that I can avoid unauthorized payment.
+
+As a delivery service provider
+•	I want to know the delivery details (e.g. address, phone number) so that I can deliver the parcel correctly or contact the receiver if needed.
+•	I want to update the delivery status at each stage so that the customer and the company can track the latest status.
+
+As a customer service clerk
+•	I want to get the user's enquiries so that I can answer their questions.
+•	I want to reply to the user with their email address so that they can get my response.
+

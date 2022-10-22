@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1000001,
+        "type": "Admin",
+        "email": "qxu15@mylangara.ca",
+        "password": "key",
+        "firstname": "Qi",
+        "lastname": "Xu",
+        "phonenumber": "1234567890",
+        "address": "None"
+    },
+    {
+        "id": 1000002,
+        "type": "Admin",
+        "email": "yhou14@mylangara.ca",
+        "password": "key",
+        "firstname": "Yan Fung Yenny",
+        "lastname": "Hou",
+        "phonenumber": "1234567890",
+        "address": "None"
+    },
+    {
+        "id": 1000003,
+        "type": "Admin",
+        "email": "ychan34@mylangara.ca",
+        "password": "key",
+        "firstname": "Yin Kwan",
+        "lastname": "Chan",
+        "phonenumber": "1234567890",
+        "address": "None"
+
+    },
+    {
+        "id": 1000004,
+        "type": "Admin",
+        "email": "yng09@mylangara.ca",
+        "password": "key",
+        "firstname": "Yee Hei",
+        "lastname": "Ng",
+        "phonenumber": "1234567890",
+        "address": "None"
+
+    },
+    
+    {
+        "id": 1234567,
+        "type": "Customer",
+        "email": "Test@gmail.com",
+        "password": "TestA1!",
+        "firstname": "Tester",
+        "lastname": "Bot",
+        "phonenumber": "6048881628",
+        "address": "100 W 49th Ave, Vancouver, BC V5Y 2Z6"
+    }
+   
+]

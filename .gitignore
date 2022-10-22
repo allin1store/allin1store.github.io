@@ -3,3 +3,5 @@
 
 # ignore ALL files in ANY directory named temp
 tmp/
+
+node_modules/

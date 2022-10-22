@@ -1,5 +1,9 @@
 
-
 export default function Shopping(props) {
-    return "Shopping page is in development....";
+    return (
+        <div className="shoppingPage">
+            {props.Category}
+            {props.Product}
+        </div>
+    )
 }

@@ -1,0 +1,82 @@
+/* proucts.jsx */
+.productPage{
+    width: 80vw;
+    margin: auto;
+    background-color: rgb(241, 244, 252);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 10rem;
+}
+
+.upperDiv, .midDiv, .lowerDiv{
+    display: flex;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.589);
+}
+/* products upper div */
+.productOverview{
+    flex-grow: 2;
+    list-style: none;
+}
+.productOverview li{
+    margin-bottom: 1rem;
+}
+/* proucts buttons */
+.midDiv{
+    width: 100%;
+    justify-content: center;
+}
+button{
+    padding: .5rem;
+    background-color: rgb(209, 233, 244);
+    border: none;
+    margin: .5rem;
+    width: 10rem;
+}
+button:hover{
+    box-shadow: 2px 2px #888888;
+    background-color: rgb(251, 252, 230);
+}
+button:active{
+    background-color: rgb(25, 73, 89);
+    color: white;
+}
+.lowerDiv{
+    margin: 3rem 0;
+    flex-direction: column;
+}
+.priceComparison{
+    margin-top: 2rem;
+}
+.priceTable{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* home page */
+.homePage{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* cat page */
+.category{
+    background-color: #ffffe3bf;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: larger;
+}
+.category ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding:0;
+}
+.category ul li{
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}

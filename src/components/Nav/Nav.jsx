@@ -17,7 +17,9 @@ export default function Nav(props) {
   }
   
   function goTo(target) {
-    console.log(target);
+    props.handleChosenItem();
+    props.handleChosenCategory();
+    // console.log(target);
     navigate(target.key);
   }
   

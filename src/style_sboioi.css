@@ -1,0 +1,136 @@
+/* proucts.jsx */
+.productPage{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 10rem;
+}
+
+.upperDiv{
+    display: flex;
+    padding: 3rem;
+    margin:auto;
+}
+.upperDiv span, .upperDiv ul{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: left;
+}
+.backButton{
+    margin: auto;
+    margin-top: 3rem;
+}
+/* products upper div */
+.productOverview{
+    flex-grow: 2;
+    list-style: none;
+}
+.productOverview li{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+/* proucts buttons */
+.lowerDiv{
+    flex-direction: column;
+}
+.description p{
+    margin-top: 2rem;
+    text-align: left;
+}
+.priceComparison{
+    margin-top: 5rem;
+}
+.priceTable{
+    box-sizing: border-box;
+    width: 100%;
+    margin-top:3rem;
+}
+
+/* home page */
+.homePage{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 3rem;
+}
+.randomLists{
+    width: 90%;
+    margin: auto;
+}
+.featureItems h2{
+    margin-bottom: 3rem;
+}
+.featureItems-list{
+    margin-bottom: 5rem;
+    
+}
+.featureItems ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+    padding-left: 0;
+    /* padding: 2rem; */
+
+}
+.featureItems li{
+    list-style: none;
+}
+.featureItems img{
+    margin-bottom: .5rem;
+    max-width: 150px;
+    max-height: 150px;
+}
+.featureItems-list a, .cat-list a{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+}
+.featureItems-list a:hover, .cat-list a:hover{
+    color: grey;
+}
+
+/* cat page */
+
+.category ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.category ul li{
+    cursor: pointer;
+}
+.cat-list ul{
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.cat-list ul li{
+    margin: 1rem;
+}
+.cat-list img{
+    max-width: 150px;
+    max-height: 150px;
+}
+.categoryLabels{
+    font-size: larger;
+    margin-bottom: 3rem;
+    padding:0;
+}
+.categoryLabels li{
+    width: 100%;
+    background-color: #ffffe3bf;
+    padding: 1rem;
+}
+.categoryLabels li:hover{
+    font-variant: small-caps;
+}
+Button{
+    padding: 3rem;
+    margin: 1rem;
+}

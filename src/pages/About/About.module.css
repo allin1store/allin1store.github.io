@@ -1,0 +1,10 @@
+.container {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.container span {
+    font-size: 16px;
+    font-weight: bold;
+}

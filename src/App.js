@@ -1,106 +1,60 @@
-// Packages
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import 'antd/dist/antd.css';
+import Nav from './components/Nav/Nav'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import './App.css';
+import './style_sboioi.css' // by grace
+import Home from './pages/Home/Home'
+import Shopping from './pages/Shopping/Shopping'
+import Product from './pages/Shopping/Product'
+import Order from './pages/Order/Order'
+import Cart from './pages/Cart/Cart'
+import Account from './pages/Account/Account'
+import About from './pages/About/About'
+import {Navigate, Route, Routes} from 'react-router-dom'
 
-// Import Font Awsome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faCartShopping, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+function App() {
+  
+  const [ chosenItem, setChosenItem ] = useState("");
+  const [chosenCategory, setChosenCategory] = useState("");
 
-// Files
-import Search from './Search.js';
-import Account from './Account.js';
-import Login from './Login.js';
-import CreateAccount from './CreateAccount.js';
-import ShoppingCart from './ShoppingCart.js';
-import AboutUs from './AboutUs.js';
-import Reference from './Reference.js';
-import Home from './Home.js';
-import Payment from './Payment.js';
-import Product from './Product.js';
-import Category from './Category.js';
+  
+  const handleChosenCategory = (cat) =>{
+    setChosenCategory(cat);
+  }
 
 
-const App = props => {
-
-    const [chosenPage, setChosenPage] = useState("home");
-
-    const handleChosenPage = (page)=>{
-        setChosenPage(page);
-    };
-
-    // temp home page created by Yenny
-    const homePage = (<div className="wrapper">
-
-                        <main>
-                            <section id="home">
-                                <div className="text">
-                                    <h2>Introduction</h2>
-                                    <p>Welcome to AllinOne Store!</p>
-                                    <p>We will have our grand opening soon. Please stay tuned!</p>
-                                </div>
-                            </section>
-                            <div id="construction"></div>
-                        </main>
-
-                        <footer>&nbsp;</footer>
-                    </div>);
+  const handleChosenItem = (item) => {
     
-    
-    return (
-        <>
-            <header>
-                <h1>AllinOne Store</h1>
-            </header>
-            
-            <div className='horizontalNav'>
-                {/* To do: search bar function */}
-                <div className="searchBar">
-                    <form>
-                        <input type="search" name="search" placeholder='Search All In One Store'></input>
-                        <span className="searchBtn" onClick={()=>{setChosenPage("searchPage")}}> {<FontAwesomeIcon icon={faMagnifyingGlass} />}</span>
-                    </form>
-                </div>
-                <ul>
-                    {/* To do: user login function */}
-                    <li><a onClick={()=>{setChosenPage("login")}}><FontAwesomeIcon icon={faUser} />Account</a></li>
-                    {/* To do: shopping cart function */}
-                    <li><a onClick={()=>{setChosenPage("shoppingCartPage")}}><FontAwesomeIcon icon={faCartShopping} />Cart</a></li>
-                </ul>
-            </div>
+    setChosenItem(item);
+  }
 
-            <div className="body">
-                <nav className='verticalNav'>
-                    <ul>
-                        <li> <a onClick={()=>{setChosenPage("homePage")}}>Home </a></li>
-                        <li> <a onClick={()=>{setChosenPage("aboutUsPage")}}>About Us </a></li>
-                        <li> <a onClick={()=>{setChosenPage("referencePage")}}>Reference</a></li>
-                    </ul>
-                </nav>
 
-                <div>
-
-                    {chosenPage == "aboutUsPage"? <AboutUs/>
-                    :chosenPage == "referencePage"? <Reference/> 
-                    :chosenPage == "login"? <Login handleChosenPage={handleChosenPage}/>
-                    :chosenPage == "shoppingCartPage"? <ShoppingCart  handleChosenPage={handleChosenPage}/>
-                    :chosenPage == "searchPage" ? <Search handleChosenPage={handleChosenPage}/>
-                    :chosenPage == "accountPage" ? <Account handleChosenPage={handleChosenPage}/> 
-                    :chosenPage == "createAccount" ? <CreateAccount handleChosenPage={handleChosenPage}/>
-                    :chosenPage == "paymentPage" ? <Payment handleChosenPage={handleChosenPage}/>
-                    :chosenPage == "productPage" ? <Product handleChosenPage={handleChosenPage}/>
-                    :chosenPage == "categoryPage" ? <Category handleChosenPage={handleChosenPage}/>
-                    :<Home  handleChosenPage={handleChosenPage}/>}
-
-                </div>
-
-            </div>
-            
-            
-            
-            
-        </>
-        
-    )
-};
+  return (
+    <div className="App">
+      <Header></Header>
+      <div style={{display: 'flex'}}>
+        <Nav handleChosenItem={handleChosenItem} handleChosenCategory={handleChosenCategory}></Nav>
+        <div className='routes'>
+          <Routes>
+            <Route path="/" element={<Navigate to="/home"/>} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/shopping" 
+                  element={<Shopping chosenItem={chosenItem} handleChosenItem={handleChosenItem} chosenCategory={chosenCategory} handleChosenCategory={handleChosenCategory}/>}
+            />
+            <Route path="/product/:id" element={<Product chosenItem={chosenItem} handleChosenItem={handleChosenItem}/>} />
+            <Route path="/order" element={<Order a="123"/>}/>
+            <Route path="/account" element={<Account a="123"/>}/>
+            <Route path="/cart" element={<Cart a="123"/>}/>
+            <Route path="/about" element={<About a="123"/>}/>
+            <Route path="*" element={<Home/>}/>
+          </Routes>
+        </div>
+      </div>
+      <Footer></Footer>
+    </div>
+  );
+}
 
 export default App;

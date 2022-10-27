@@ -1,6 +1,9 @@
 import AboutCss from'./About.module.css';
 
 const About = (props) => {
+    // javascript here
+    // let data = fetch().....
+
     return <div className={AboutCss.container}>
         <h2>ABOUT US</h2>
         <p>
@@ -21,6 +24,4 @@ const About = (props) => {
         <p>Yee Hei Ng, <a href="mailto:yng09@mylangara.ca">yng09@mylangara.ca</a></p>
         </div>;
 }
-
-
 export default About;

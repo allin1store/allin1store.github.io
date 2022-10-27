@@ -170,3 +170,29 @@ export default function Shopping(props) {
         </div>
     )
 }
+
+
+
+
+let div1 = document.getElementById("div1");
+div1.style.visibility = "hidden";
+div1.style.visibility = "visible";
+
+let class1 = document.getElementsByClassName("class1");
+class1.style.color = "blue";
+class1.style.color = "red";
+
+let text1 = document.getElementById("text1");
+text1.innerHTML="new content!";
+
+
+let input1 = document.getElementById("input1");
+input1.innerHTML="name";
+let input2 = document.getElementById("input2");
+input2.innerHTML="password";
+let input3 = document.getElementById("input3");
+input3.innerHTML="email";
+let input4 = document.getElementById("input4");
+input4.innerHTML="phone";
+let input5 = document.getElementById("input5");
+input5.innerHTML="address";

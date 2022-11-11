@@ -12,6 +12,9 @@ import Order from './pages/Order/Order'
 import Cart from './pages/Cart/Cart'
 import Account from './pages/Account/Account'
 import About from './pages/About/About'
+import SignUp from "./pages/Account/SignUp"
+import ConfirmEmail from "./pages/Account/ConfirmEmail"
+import User from "./pages/Account/User"
 import {Navigate, Route, Routes} from 'react-router-dom'
 
 function App() {
@@ -19,17 +22,19 @@ function App() {
   const [ chosenItem, setChosenItem ] = useState("");
   const [chosenCategory, setChosenCategory] = useState("");
 
+  const [chosenId, setChosenId] = useState("");
   
   const handleChosenCategory = (cat) =>{
     setChosenCategory(cat);
   }
 
-
   const handleChosenItem = (item) => {
-    
     setChosenItem(item);
   }
 
+  const handleChosenId = (id) => {
+    setChosenId(id);
+  }
 
   return (
     <div className="App">
@@ -45,10 +50,13 @@ function App() {
             />
             <Route path="/product/:id" element={<Product chosenItem={chosenItem} handleChosenItem={handleChosenItem}/>} />
             <Route path="/order" element={<Order a="123"/>}/>
-            <Route path="/account" element={<Account a="123"/>}/>
+            <Route path="/account" element={<Account chosenId={chosenId} handleChosenId={handleChosenId}/>}/>
             <Route path="/cart" element={<Cart a="123"/>}/>
             <Route path="/about" element={<About a="123"/>}/>
             <Route path="*" element={<Home/>}/>
+		        <Route path="account/O/signUp" element={<SignUp a="123"/>}/>
+            <Route path="account/O/signUp/O/confirmemail" element={<ConfirmEmail a="123"/>}/>
+            <Route path="account/O/user" element={<User chosenId={chosenId} handleChosenId={handleChosenId} />}/>
           </Routes>
         </div>
       </div>

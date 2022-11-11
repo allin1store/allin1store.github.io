@@ -1,3 +1,43 @@
 .container {
-    background-color: red;
+    display: block;
+    width: calc(100vw - 15vw);
+    height: calc(100vh - 15vh);
+
+    color: black;
+    padding-top: 5%;
+}
+
+.signUpContainer{
+    display: block;
+    width: calc(100vw - 15vw);
+    height: calc(100vh - 15vh);
+
+    color: black;
+    table-layout: fixed;
+    height: 100%;
+}
+
+.form{
+    display: inline-block;
+    padding: 25px 70px 25px 70px;
+
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+    
+}
+
+.leftDetails{
+    display: inline-block;
+    padding: 50px;
+
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 100%;
+
+    margin: 75px;
+}
+
+.inputBox Form.Item{
+    width: "45%"
 }

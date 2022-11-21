@@ -1,0 +1,24 @@
+.crumb {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: large;
+}
+
+.form {
+    width: auto;
+    margin-left: 25%;
+    margin-right: 30%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+.formItem {
+    width: 70%;
+    font-weight: bold;
+    margin-left: 15%;
+}
+
+.button {
+    width: 70%;
+    border-radius: 5px;
+}

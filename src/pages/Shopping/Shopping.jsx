@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Category from "./Category";
 import Product from "./Product";
 import { Link } from "react-router-dom";
-import { Button } from "antd";
-
+import { Button, Breadcrumb } from "antd";
+import ShoppingCss from "./Shopping.module.css"
 
 export default function Shopping(props) {
 
@@ -11,113 +11,10 @@ export default function Shopping(props) {
     const [randomDesktopList, setRandomDesktopList] = useState([]);
     const [randomTabletList, setRandomTabletList] = useState([]);
 
-    const getLaptopData = () =>{
-
-        let aRandomProductList = [];
-
-        fetch('/bestbuyAPI/laptop/page1.json',
-        {
-            headers:{
-                'Content-Type': 'application/json',
-                'Accept' : 'application/json'
-            }
-        })
-        .then(res=>{
-            return res.json();
-        })
-        .then(res=>{
-            let hundardProducts = res.products;
-            let ranIndex = Math.floor(Math.random() * 40);
-
-            for(let i = 0; i < 3; i++){
-
-                aRandomProductList[i] = {
-                    name: hundardProducts[ranIndex].name,
-                    sku: hundardProducts[ranIndex].sku,
-                    image: hundardProducts[ranIndex].image,
-                    manufacturer: hundardProducts[ranIndex].manufacturer,
-                    detail: hundardProducts[ranIndex].longDescription,
-                    regularPrice: hundardProducts[ranIndex].regularPrice,
-                    salePrice: hundardProducts[ranIndex].salePrice
-                }
-                ranIndex += 2;
-            }
-            setRandomLaptopList(aRandomProductList);
-        })
-    }
-    const getDesktopData = () =>{
-
-        let aRandomProductList = [];
-
-        fetch('/bestbuyAPI/desktop/page1.json',
-        {
-            headers:{
-                'Content-Type': 'application/json',
-                'Accept' : 'application/json'
-            }
-        })
-        .then(res=>{
-            return res.json();
-        })
-        .then(res=>{
-            let hundardProducts = res.products;
-            let ranIndex = Math.floor(Math.random() * 40);
-
-            for(let i = 0; i < 3; i++){
-
-                aRandomProductList[i] = {
-                    name: hundardProducts[ranIndex].name,
-                    sku: hundardProducts[ranIndex].sku,
-                    image: hundardProducts[ranIndex].image,
-                    manufacturer: hundardProducts[ranIndex].manufacturer,
-                    detail: hundardProducts[ranIndex].longDescription,
-                    regularPrice: hundardProducts[ranIndex].regularPrice,
-                    salePrice: hundardProducts[ranIndex].salePrice
-                }
-                ranIndex += 2;
-            }
-            setRandomDesktopList(aRandomProductList);
-        })
-    }
-    const getTabletData = () =>{
-
-        let aRandomProductList = [];
-
-        fetch('/bestbuyAPI/tablet/page1.json',
-        {
-            headers:{
-                'Content-Type': 'application/json',
-                'Accept' : 'application/json'
-            }
-        })
-        .then(res=>{
-            return res.json();
-        })
-        .then(res=>{
-            let hundardProducts = res.products;
-            let ranIndex = Math.floor(Math.random() * 40);
-
-            for(let i = 0; i < 3; i++){
-
-                aRandomProductList[i] = {
-                    name: hundardProducts[ranIndex].name,
-                    sku: hundardProducts[ranIndex].sku,
-                    image: hundardProducts[ranIndex].image,
-                    manufacturer: hundardProducts[ranIndex].manufacturer,
-                    detail: hundardProducts[ranIndex].longDescription,
-                    regularPrice: hundardProducts[ranIndex].regularPrice,
-                    salePrice: hundardProducts[ranIndex].salePrice
-                }
-                ranIndex += 20;
-            }
-            setRandomTabletList(aRandomProductList);
-        })
-    }
-
     useEffect(()=>{
-        getLaptopData();
-        getDesktopData();
-        getTabletData()
+        setRandomLaptopList(JSON.parse(window.sessionStorage.getItem("laptopList")));
+        setRandomDesktopList(JSON.parse(window.sessionStorage.getItem("desktopList")));
+        setRandomTabletList(JSON.parse(window.sessionStorage.getItem("tabletList")))
     },[]);
     
 
@@ -126,7 +23,6 @@ export default function Shopping(props) {
         <h2>Featured Laptop:</h2>
         <ul className="featureItems-list">
             {randomLatopList.map(item => (
-                
                 <li key={item.sku} onClick={()=>props.handleChosenItem(item)}> <Link to={"/product/"+item.sku}><span><img src={item.image} alt={item.name}/></span> <span>{item.name}</span></Link></li>
             ))}
         </ul>
@@ -155,6 +51,9 @@ export default function Shopping(props) {
 
     return (
         <div className="shoppingPage">
+            <Breadcrumb className={ShoppingCss.crumb}>
+                <Breadcrumb.Item><a href="/shopping">Shopping</a></Breadcrumb.Item>
+            </Breadcrumb>
             <Category chosenItem={props.chosenItem} handleChosenItem={props.handleChosenItem} chosenCategory={props.chosenCategory} handleChosenCategory={props.handleChosenCategory}/>
             {props.chosenItem?
             <Product chosenItem={props.chosenItem} handleChosenItem={props.handleChosenItem}/>:  
@@ -170,29 +69,3 @@ export default function Shopping(props) {
         </div>
     )
 }
-
-
-
-
-let div1 = document.getElementById("div1");
-div1.style.visibility = "hidden";
-div1.style.visibility = "visible";
-
-let class1 = document.getElementsByClassName("class1");
-class1.style.color = "blue";
-class1.style.color = "red";
-
-let text1 = document.getElementById("text1");
-text1.innerHTML="new content!";
-
-
-let input1 = document.getElementById("input1");
-input1.innerHTML="name";
-let input2 = document.getElementById("input2");
-input2.innerHTML="password";
-let input3 = document.getElementById("input3");
-input3.innerHTML="email";
-let input4 = document.getElementById("input4");
-input4.innerHTML="phone";
-let input5 = document.getElementById("input5");
-input5.innerHTML="address";

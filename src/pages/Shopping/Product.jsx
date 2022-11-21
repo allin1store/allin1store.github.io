@@ -1,16 +1,32 @@
-import { Button } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { Button, Breadcrumb, Popover } from "antd";
+import { Link } from "react-router-dom";
+import ProductCss from "./Product.module.css"
 
 export default function Product({chosenItem, handleChosenItem}) {
 
-    const navigate = useNavigate();
-
-    const handleBack = () =>{
-        
-        handleChosenItem("");
-        navigate(-1);
-    }
-    
+    let content = 
+    <table className={ProductCss.table}>
+        <tr>
+            <th>Website</th>
+            <th className={ProductCss.content}>Amazon Canada</th>
+            <th className={ProductCss.content}>Best Buy</th>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td className={ProductCss.content}>{chosenItem.name}</td>
+            <td className={ProductCss.content}>{chosenItem.name}</td>
+        </tr>
+        <tr>
+            <td>Brand:</td>
+            <td className={ProductCss.content}>{chosenItem.manufacturer}</td>
+            <td className={ProductCss.content}>{chosenItem.manufacturer}</td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td className={ProductCss.content}>$ {chosenItem.salePrice + 25}</td>
+            <td className={ProductCss.content}>$ {chosenItem.salePrice + 16}</td>
+        </tr>
+    </table>;
 
     const productOverview=(
         <>
@@ -27,6 +43,9 @@ export default function Product({chosenItem, handleChosenItem}) {
                     <li key="buy">
                         <Button>Add to cart</Button>
                         <Button>Buy now</Button>
+                        <Popover content={content}>
+                            <Button type="primary">Price Comparison</Button>
+                        </Popover>
                     </li>
                 </ul>
             </div>
@@ -40,43 +59,18 @@ export default function Product({chosenItem, handleChosenItem}) {
                         </div>
                     }
                 
-                <div className="priceComparison">
-                    <h3>Price Comparison Table</h3>
-                    <table className="priceTable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Website1</th>
-                                <th>Best Buy</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Name:</td>
-                                <td>product name</td>
-                                <td>product name</td>
-                            </tr>
-                            <tr>
-                                <td>Brand:</td>
-                                <td>brand name</td>
-                                <td>brand name</td>
-                            </tr>
-                            <tr>
-                                <td>Price:</td>
-                                <td>$</td>
-                                <td>$</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
             </div>
-            <Button className="backButton" onClick={()=> handleBack()}>Back</Button>
         </>
     )
 
     return (
-        <div className="productPage">
+        <div>
+            <Breadcrumb className={ProductCss.crumb}>
+                <Breadcrumb.Item><a href="/shopping">Shopping</a></Breadcrumb.Item>
+                <Breadcrumb.Item>Product</Breadcrumb.Item>
+            </Breadcrumb>
+            <div className="productPage">
+            
             {chosenItem=== "" ? 
             <>
             <p>Sorry, product not found...</p>
@@ -85,5 +79,7 @@ export default function Product({chosenItem, handleChosenItem}) {
             
             : productOverview}
         </div>
+        </div>
+        
     );
 }

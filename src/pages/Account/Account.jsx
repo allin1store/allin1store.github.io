@@ -1,86 +1,95 @@
-import AccountCss from './Account.module.css';
-import { Button, Form, Input } from 'antd';
+import {Button, Breadcrumb, Divider} from 'antd';
 import { useNavigate } from 'react-router-dom';
-import React from 'react';
-import users from "./users.json";
-import { useState, useEffect } from "react";
+import React, {useContext} from "react";
+import AccountCss from "./Account.module.css"
+import {AppContext} from "../../App.js";
+
 
 const Account = (props) => {
-    console.log("Account received porps: ", props);
-
-    const [form] = Form.useForm();
+    const { name, setName } = useContext(AppContext)
     const navigate = useNavigate();
-
-    useEffect( ()=> {
-        if (props.chosenId != "")
-            navigate("O/user");
-    })
-
-    function goTo(){
-        navigate("O/signUp");
-    }
-    
-    const onReset = () => {
-        form.resetFields();
+    function goToSignin() {
+        navigate("/signin");
     };
-
-    const layout = {
-        wrapperCol: {
-          offset: 8,
-          span: 16,
-        },
+    function goToHome() {
+        navigate("/home");
     };
-
-    const formLayout = {
-        labelCol: { span: 8 },
-        wrapperCol: { span:16 }
-    }
-
-    const checkAccount = () => {
-        if (form.getFieldValue("email") == undefined || form.getFieldValue("password") == undefined)
-            return;
-        else{
-            for (let x = 0; x < users.length; x++){
-                if (users[x].email.toLowerCase() === form.getFieldValue("email").toLowerCase() && 
-                        users[x].password === form.getFieldValue("password")){
-                        
-                        props.handleChosenId(users[x].id);
-                        navigate("/home");
-                }
-            }
-        }
+    function logout() {
+        window.sessionStorage.removeItem("currentUser");
+        setName("");
+        goToHome();
     };
-
-        return <div className={AccountCss.container} style={{display: props.chosenId != "" ? "none" : "block"}}>
-            <div className={AccountCss.form}>
-                <Form {...formLayout} form = {form}>
-                    <Form.Item
-                        label="Email" name="email" rules = {[ { required: true, message: "Invalid email or password" , type: "email" }]}>
-                        <Input />
-                    </Form.Item>
-
-                    <Form.Item
-                        label="Password" name="password">
-                        <Input.Password />
-                    </Form.Item>
-
-                    <Form.Item {...layout}>
-                        <Button type="primary" htmlType="submit" name="submit" onClick={checkAccount}> Sign In </Button>
-                        
-                        
-                    </Form.Item>
-
-                </Form>
-            </div>
-
-            <br/>
-
-            <Button type="link" htmlType="button" style={{fontSize: 12}} onClick={goTo}>
-                    Create Account
+    let currentUser = JSON.parse(window.sessionStorage.getItem("currentUser"));
+    if (currentUser == null || currentUser == undefined) {
+        return <div className={AccountCss.container1}>
+            You are not logged in.
+            <Button type="default" htmlType="submit" onClick={goToSignin}>
+              Sign in
             </Button>
-        </div>;
-    
+        </div>
+    }
+    return <div className={AccountCss.container}>
+        <Breadcrumb className={AccountCss.crumb}>
+            <Breadcrumb.Item><a href="/account">Account</a></Breadcrumb.Item>
+        </Breadcrumb>
+        <span className={AccountCss.caption}>Account details</span>
+        <br></br>
+        <div className={AccountCss.content}>
+            <span className={AccountCss.item}>
+                <span>
+                    <label>First Name</label><br></br>
+                    <span>{currentUser.firstName}</span>
+                </span>
+                <Button>Edit</Button>
+            </span>
+            <Divider></Divider>
+            <span className={AccountCss.item}>
+                <span>
+                    <label>Last Name</label><br></br>
+                    <span>{currentUser.lastName}</span>
+                </span>
+                <Button>Edit</Button>
+            </span>
+            <Divider></Divider>
+            <span className={AccountCss.item}>
+                <span>
+                    <label>Email</label><br></br>
+                    <span>{currentUser.email}</span>
+                </span>
+                <Button>Edit</Button>
+            </span>
+            <Divider></Divider>
+            <span className={AccountCss.item}>
+                <span>
+                    <label>Password</label><br></br>
+                    <span>*************</span>
+                </span>
+                <Button>Edit</Button>
+            </span>
+            <Divider></Divider>
+            <span className={AccountCss.item}>
+                <span>
+                    <label>Phone</label><br></br>
+                    <span>{currentUser.phoneNumber}</span>
+                </span>
+                <Button>Edit</Button>
+            </span>
+            <Divider></Divider>
+            <span className={AccountCss.item}>
+                <span>
+                    <label>Address</label><br></br>
+                    <span>{currentUser.address}</span>
+                </span>
+                <Button>Edit</Button>
+            </span>
+            <Divider></Divider>
+            <Button onClick={logout} danger type="primary" className={AccountCss.logout}>Log out</Button>
+            <br></br><br></br><br></br><br></br>
+        </div>
+        
+        
+        
+    </div>;
 }
 
-//<Button htmlType="button" onClick={onReset}> Reset </Button>
 export default Account;

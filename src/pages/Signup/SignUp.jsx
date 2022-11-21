@@ -1,11 +1,10 @@
-import AccountCss from './Account.module.css';
-import {Form, Input, Button, Select} from 'antd';
+import {Form, Input, Button, Select, Breadcrumb} from 'antd';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import users from "./users.json";
+import SignUpCss from './SignUp.module.css';
+
 
 const SignUp = (props) => {
-    console.log("SignUp received porps: ", props);
 
     const [form] = Form.useForm();
     const { Option } = Select;
@@ -35,18 +34,6 @@ const SignUp = (props) => {
     const checkTypeUser = () =>({
         validator(_, value){
             return value === undefined ? Promise.reject("Select type") : Promise.resolve();
-        }
-    })
-
-    const checkEmail = ()=>({
-        validator(_, value){
-            if (value == undefined || value.length == 0)
-                return Promise.reject("Please enter email");
-            
-            for (let x = 0; x < users.length; x++)
-                if (users[x].email.toLowerCase() === value.toLowerCase())
-                    return Promise.reject("Invalid email");
-            return Promise.resolve();
         }
     })
 
@@ -84,53 +71,52 @@ const SignUp = (props) => {
         }
     })
 
-    return <div className={AccountCss.signUpContainer}>
-        <div className={AccountCss.form}>
+    return <div>
+        <div>
+        <Breadcrumb className={SignUpCss.crumb}>
+            <Breadcrumb.Item><a href="/signin">Sign in</a></Breadcrumb.Item>
+            <Breadcrumb.Item><a href="/signup">Create account</a></Breadcrumb.Item>
+        </Breadcrumb>
 
-            <Form form={form} name="form" onFinish={onFinish}>
+            <Form form={form} name="form" onFinish={onFinish} className={SignUpCss.form} layout="vertical">
 
-                <Form.Item label="Type" name="type" rules={[ checkTypeUser]} hasFeedback>
+                <Form.Item label="User type" name="type" rules={[ checkTypeUser]} hasFeedback className={SignUpCss.formItem}>
                     <Select style={{width: "100%" }} >
                         <Option value="Customer">Customer</Option>
                         <Option value="Supplier">Supplier</Option>
                     </Select> 
                 </Form.Item>
 
-                <Form.Item label="Email" name="email" rules = {[ { type: "email"}, checkEmail ]}  hasFeedback>
+                <Form.Item label="Email" name="email" rules = {[ { type: "email"} ]}  hasFeedback className={SignUpCss.formItem}>
                     <Input />
                 </Form.Item>    
 
-                <br/>
-
-                <Form.Item label="Password" name="password"  rules = {[ checkPassword ]} hasFeedback>
+                <Form.Item label="Password" name="password"  rules = {[ checkPassword ]} hasFeedback className={SignUpCss.formItem}>
                         <Input.Password />
                     </Form.Item>
 
-                    <Form.Item label="Confirm Password" name="confirmpassword" rules = {[ confirmPassword ]} hasFeedback>
+                    <Form.Item label="Confirm Password" name="confirmpassword" rules = {[ confirmPassword ]} hasFeedback className={SignUpCss.formItem}>
                         <Input.Password  />
                     </Form.Item>
 
-                <br/>
 
-                <Form.Item label="FirstName" name="firstname" rules={[ checkName ]} hasFeedback>
+                <Form.Item label="FirstName" name="firstname" rules={[ checkName ]} hasFeedback className={SignUpCss.formItem}>
                     <Input />
                 </Form.Item>
                 
-                <Form.Item label="LastName" name="lastname"  rules = {[ checkName ]} hasFeedback>
+                <Form.Item label="LastName" name="lastname"  rules = {[ checkName ]} hasFeedback className={SignUpCss.formItem}>
                     <Input />
                 </Form.Item>
-
-                <br/>
     
-                <Form.Item label="Phone Number" name="phonenumber"  rules = {[ {type: "string", whitespace: "false"}, checkPhoneNumber ]} hasFeedback>
+                <Form.Item label="Phone Number" name="phonenumber"  rules = {[ {type: "string", whitespace: "false"}, checkPhoneNumber ]} hasFeedback  className={SignUpCss.formItem}>
                         <Input/>
                 </Form.Item>
-                <Form.Item label="Address" name="address">
+                <Form.Item label="Address" name="address"  className={SignUpCss.formItem}>
                         <Input />
                 </Form.Item>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit"> Create Account </Button>
+                    <Button type="primary" htmlType="submit" className={SignUpCss.button}> Create Account </Button>
                 </Form.Item>
                
             </Form>

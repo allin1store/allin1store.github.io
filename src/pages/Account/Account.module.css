@@ -1,43 +1,46 @@
-.container {
-    display: block;
-    width: calc(100vw - 15vw);
-    height: calc(100vh - 15vh);
-
-    color: black;
-    padding-top: 5%;
+.container1 {
+    margin-top: 10%;
+    font-size: large;
+    font-weight: bolder;
 }
 
-.signUpContainer{
-    display: block;
-    width: calc(100vw - 15vw);
-    height: calc(100vh - 15vh);
-
-    color: black;
-    table-layout: fixed;
-    height: 100%;
+.crumb {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: large;
 }
 
-.form{
-    display: inline-block;
-    padding: 25px 70px 25px 70px;
+.caption {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 40%;
+}
 
+.content {
+    width: 40%;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.content .logout {
     border-radius: 5px;
-    border: 2px solid black;
-    background-color: white;
-    
+    width: 90%
 }
 
-.leftDetails{
-    display: inline-block;
-    padding: 50px;
-
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+.item label {
+    font-size: 15px;
+    font-weight: bolder;
+}
+.item span {
+    text-align: left;
+}
+.item button {
     border-radius: 5px;
-    border: 2px solid black;
-    height: 100%;
-
-    margin: 75px;
-}
-
-.inputBox Form.Item{
-    width: "45%"
 }

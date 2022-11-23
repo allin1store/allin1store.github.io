@@ -1,5 +1,81 @@
 .crumb {
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
     font-size: large;
+    width: auto;
+    background-color: white;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
+.listPage {
+    margin: 1%;
+    background-color: white;
+    width: auto;
+    padding: 1%
+}
+
+.category {
+    margin: 1%;
+    width: auto;
+    background-color: #FFD814;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.category span {
+    border: 1px solid black;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 162px;
+    padding-right: 162px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 1px solid lightslategray;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.randomItem span{
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 330px;
+    cursor: pointer;
+}
+.randomItem img {
+    height: 100px;
+}
+
+.randomItem {
+    list-style-type: none;
+}
+
+.catList {
+    margin-top: 20px;
+}
+
+.catList ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.catList li {
+    width: 320px;
+}
+
+.catList span {
+    width: 300px;
 }

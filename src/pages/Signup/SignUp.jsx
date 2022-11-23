@@ -74,8 +74,8 @@ const SignUp = (props) => {
     return <div>
         <div>
         <Breadcrumb className={SignUpCss.crumb}>
-            <Breadcrumb.Item><a href="/signin">Sign in</a></Breadcrumb.Item>
-            <Breadcrumb.Item><a href="/signup">Create account</a></Breadcrumb.Item>
+            <Breadcrumb.Item onClick={()=> navigate("/signin")} style={{cursor: 'pointer'}}>Sign in</Breadcrumb.Item>
+            <Breadcrumb.Item onClick={()=> navigate("/signup")} style={{cursor: 'pointer'}}>Create account</Breadcrumb.Item>
         </Breadcrumb>
 
             <Form form={form} name="form" onFinish={onFinish} className={SignUpCss.form} layout="vertical">
@@ -115,9 +115,7 @@ const SignUp = (props) => {
                         <Input />
                 </Form.Item>
 
-                <Form.Item>
-                    <Button type="primary" htmlType="submit" className={SignUpCss.button}> Create Account </Button>
-                </Form.Item>
+                <Button type="primary" htmlType="submit" className={SignUpCss.button}> Create Account </Button>
                
             </Form>
         </div>

@@ -1,13 +1,21 @@
 .container {
     max-width: auto;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 7%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: white;
+    padding: 5%
 }
 
 .container form {
     text-align: center;
     padding-right: 30%;
+}
+
+.formItem {
+    width: 85%;
+    padding-left: 30%;
 }
 
 .signup {
@@ -22,7 +30,14 @@
 }
 
 .crumb {
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
     font-size: large;
+    width: auto;
+    background-color: white;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
 }

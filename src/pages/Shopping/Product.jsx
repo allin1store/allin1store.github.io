@@ -1,8 +1,15 @@
 import { Button, Breadcrumb, Popover } from "antd";
 import { Link } from "react-router-dom";
-import ProductCss from "./Product.module.css"
+import ProductCss from "./Product.module.css";
+import { useNavigate } from 'react-router-dom';
+import {AppContext} from "../../App.js";
+import React, {useContext} from 'react';
 
-export default function Product({chosenItem, handleChosenItem}) {
+
+export default function Product() {
+    let chosenItem = JSON.parse(window.sessionStorage.getItem("choosenItem"));
+    const navigate = useNavigate();
+    const { number, setNumber } = useContext(AppContext);
 
     let content = 
     <table className={ProductCss.table}>
@@ -28,6 +35,19 @@ export default function Product({chosenItem, handleChosenItem}) {
         </tr>
     </table>;
 
+        function addToCart(item) {
+            console.log("inaddCart", item);
+            let user = JSON.parse(window.sessionStorage.getItem("currentUser"));
+            if (user == null || user == undefined) {
+                navigate("/signin");
+            }
+            else {
+                user.cart.push(item);
+                setNumber(user.cart.length);
+                window.sessionStorage.setItem("currentUser", JSON.stringify(user));
+            }
+        }
+
     const productOverview=(
         <>
         <div className="upperDiv">
@@ -41,7 +61,7 @@ export default function Product({chosenItem, handleChosenItem}) {
                     <li key="price">Price:{" $"+chosenItem.salePrice}</li>
                     <li key="quantity">Quantity: {3+Math.floor(Math.random()*20)}</li>
                     <li key="buy">
-                        <Button>Add to cart</Button>
+                        <Button onClick={(e) => {addToCart(chosenItem)}}>Add to cart</Button>
                         <Button>Buy now</Button>
                         <Popover content={content}>
                             <Button type="primary">Price Comparison</Button>
@@ -66,7 +86,7 @@ export default function Product({chosenItem, handleChosenItem}) {
     return (
         <div>
             <Breadcrumb className={ProductCss.crumb}>
-                <Breadcrumb.Item><a href="/shopping">Shopping</a></Breadcrumb.Item>
+                <Breadcrumb.Item onClick={()=> navigate("/shopping")} style={{cursor: 'pointer'}}>Shopping</Breadcrumb.Item>
                 <Breadcrumb.Item>Product</Breadcrumb.Item>
             </Breadcrumb>
             <div className="productPage">

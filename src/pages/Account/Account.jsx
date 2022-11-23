@@ -32,9 +32,10 @@ const Account = (props) => {
         <Breadcrumb className={AccountCss.crumb}>
             <Breadcrumb.Item><a href="/account">Account</a></Breadcrumb.Item>
         </Breadcrumb>
-        <span className={AccountCss.caption}>Account details</span>
-        <br></br>
+        <div className={AccountCss.main}>
         <div className={AccountCss.content}>
+            <span className={AccountCss.caption}>Account details</span>
+            <br></br><br></br>
             <span className={AccountCss.item}>
                 <span>
                     <label>First Name</label><br></br>
@@ -82,9 +83,17 @@ const Account = (props) => {
                 </span>
                 <Button>Edit</Button>
             </span>
-            <Divider></Divider>
+        </div>
+        <div className={AccountCss.content}>
+            <span className={AccountCss.caption}>Operations</span>
+            <br></br><br></br>
+            <Button onClick={() => navigate("/payment")} type="default" className={AccountCss.logout}>Payment management</Button>
+            <br></br>
+            <Button onClick={logout} type="default" className={AccountCss.logout}>Order history</Button>
+            <br></br>
             <Button onClick={logout} danger type="primary" className={AccountCss.logout}>Log out</Button>
-            <br></br><br></br><br></br><br></br>
+        </div>
+
         </div>
         
         

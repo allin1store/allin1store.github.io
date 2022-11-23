@@ -21,13 +21,14 @@ export const AppContext = React.createContext({});
 
 function App() {
   const [name, setName] = useState()
+  const [number, setNumber] = useState();
   
   const [ chosenItem, setChosenItem ] = useState("");
   const [chosenCategory, setChosenCategory] = useState("");
 
   const [chosenId, setChosenId] = useState("");
   
-  const handleChosenCategory = (cat) =>{
+/*  const handleChosenCategory = (cat) =>{
     setChosenCategory(cat);
   }
 
@@ -38,6 +39,7 @@ function App() {
   const handleChosenId = (id) => {
     setChosenId(id);
   }
+  */
 
   const getUsers =() => {
     fetch('/Users/users.json',
@@ -86,7 +88,6 @@ function App() {
             }
             ranIndex += 2;
         }
-        console.log("before setinto sessionstorage", aRandomProductList)
         window.sessionStorage.setItem("laptopList", JSON.stringify(aRandomProductList));
     })
 }
@@ -160,36 +161,89 @@ const getTabletData = () =>{
     })
 }
 
+const getCategoryLaptopData = () => {
+    fetch(`/bestbuyAPI/laptop/page1.json`,
+        {
+            headers:{
+                'Content-Type': 'application/json',
+                'Accept' : 'application/json'
+            }
+        })
+        .then(res=>{
+            return res.json();
+        })
+        .then(res=>{
+            let catProductList = res.products;
+            window.sessionStorage.setItem("categoryLaptop", JSON.stringify(catProductList));
+        })
+}
+
+const getCategoryTabletData = () => {
+    fetch(`/bestbuyAPI/tablet/page1.json`,
+        {
+            headers:{
+                'Content-Type': 'application/json',
+                'Accept' : 'application/json'
+            }
+        })
+        .then(res=>{
+            return res.json();
+        })
+        .then(res=>{
+            let catProductList = res.products;
+            window.sessionStorage.setItem("categoryTablet", JSON.stringify(catProductList));
+        })
+}
+
+const getCategoryDesktopData = () => {
+    fetch(`/bestbuyAPI/desktop/page1.json`,
+        {
+            headers:{
+                'Content-Type': 'application/json',
+                'Accept' : 'application/json'
+            }
+        })
+        .then(res=>{
+            return res.json();
+        })
+        .then(res=>{
+            let catProductList = res.products;
+            window.sessionStorage.setItem("categoryDesktop", JSON.stringify(catProductList));
+        })
+}
+
 getDesktopData();
 getLaptopData();
 getTabletData();
+getCategoryDesktopData();
+getCategoryLaptopData();
+getCategoryTabletData();
 getUsers();
 
 
   return (
     <AppContext.Provider value={{
-        name, setName
+        name, setName, number, setNumber
       }}>
     
     <div className="App">
       <Header></Header>
       <div style={{display: 'flex'}}>
-        <Nav handleChosenItem={handleChosenItem} handleChosenCategory={handleChosenCategory}></Nav>
-        <div className='routes'>
+        <Nav></Nav>
+        <div className='routes' style={{background: '#EAEDED'}}>
           <Routes>
             <Route path="/" element={<Navigate to="/home"/>} />
             <Route path="/home" element={<Home />} />
-            <Route path="/shopping" 
-                  element={<Shopping chosenItem={chosenItem} handleChosenItem={handleChosenItem} chosenCategory={chosenCategory} handleChosenCategory={handleChosenCategory}/>}
-            />
-            <Route path="/product/:id" element={<Product chosenItem={chosenItem} handleChosenItem={handleChosenItem}/>} />
+            <Route path="/shopping" element={<Shopping/>}/>
+            <Route path="/product/:id" element={<Product/>} />
             <Route path="/order" element={<Order a="123"/>}/>
             <Route path="/signin" element={<Signin/>}/>
-            <Route path="/account" element={<Account chosenId={chosenId} handleChosenId={handleChosenId}/>}/>
+            <Route path="/account" element={<Account/>}/>
             <Route path="/cart" element={<Cart a="123"/>}/>
             <Route path="/about" element={<About a="123"/>}/>
             <Route path="*" element={<Home/>}/>
 		    <Route path="/signup" element={<SignUp a="123"/>}/>
+            <Route path="/payment" element={<SignUp a="123"/>}/>
           </Routes>
         </div>
       </div>

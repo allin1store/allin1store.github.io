@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {AppContext} from "../../App.js";
 
 const Signin = (props) => {
-  const { name, setName } = useContext(AppContext)
+  const { name, setName } = useContext(AppContext);
     const onFinish = (values) => {
         console.log('Success:', values);
         let user = JSON.parse(window.sessionStorage.getItem("preparedUser"));
@@ -29,12 +29,12 @@ const Signin = (props) => {
       return (
         <div>
         <Breadcrumb className={SigninCss.crumb}>
-            <Breadcrumb.Item><a href="/signin">Signin</a></Breadcrumb.Item>
+          <Breadcrumb.Item onClick={()=> navigate("/signin")} style={{cursor: 'pointer'}}>Sign in</Breadcrumb.Item>
         </Breadcrumb>
         <div className={SigninCss.container}>
         <span className={SigninCss.caption}>Sign in</span>
         <br></br><br></br>
-        <Form
+        <Form className={SigninCss.form}
           name="basic"
           labelCol={{
             span: 8,
@@ -49,7 +49,7 @@ const Signin = (props) => {
           onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
-          <Form.Item
+          <Form.Item className={SigninCss.formItem}
             label="Email"
             name="email"
             rules={[
@@ -62,7 +62,7 @@ const Signin = (props) => {
             <Input />
           </Form.Item>
     
-          <Form.Item
+          <Form.Item className={SigninCss.formItem}
             label="Password"
             name="password"
             rules={[

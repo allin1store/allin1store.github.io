@@ -1,0 +1,115 @@
+.container {    
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    width: 70%;
+    height: 90%;
+    margin: 1%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.right {
+    width: 30%;
+    height: 90%;
+    margin-top: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    background-color: white;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.crumb {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: large;
+    width: auto;
+    background-color: white;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
+.caption {
+    margin-right: 65%;
+    font-size: large;
+    font-weight: bolder;
+    height: 100%
+}
+
+.info {
+    margin-left: 17%;
+    width: 70%;
+    text-align: left;
+    font-size: 17px;
+}
+
+.info label {
+    font-weight: bold;
+}
+
+.item1 {
+    display: block;
+    margin-bottom: 5%;
+}
+
+.step1 {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+}
+
+.step2 {
+    margin-top: 2%;
+}
+
+.img {
+    width: 70px;
+    height: 70px;
+    margin: 3%;
+}
+
+.img img {
+    width: 65px;
+    height: 65px;
+}
+
+.name {
+    margin: 4%;
+    font-weight: bold;
+    width: 450px;
+}
+.price {
+    font-size: large;
+    font-weight: bold;
+    color: red;
+}
+
+.else {
+    padding-left: 4%;
+    padding-right: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    text-align: left;
+}
+.buttons {
+    border-radius: 5px;
+    width: 70%
+}

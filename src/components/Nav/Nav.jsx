@@ -1,4 +1,4 @@
-import { HomeOutlined, ShoppingOutlined, ProfileOutlined, AccountBookOutlined, ContactsOutlined  } from '@ant-design/icons';
+import { HomeOutlined, ShoppingOutlined, ProfileOutlined, AccountBookOutlined, ContactsOutlined, DollarOutlined  } from '@ant-design/icons';
 import { Menu } from 'antd';
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
@@ -25,8 +25,11 @@ export default function Nav(props) {
   const items = [
     getItem('Home', 'home', <HomeOutlined />),
     getItem('Shopping', 'shopping', <ShoppingOutlined />),
-    getItem('Order', 'order', <ProfileOutlined />),
-    getItem('Account', 'account', <AccountBookOutlined />),
+    getItem('Account', 'account', <AccountBookOutlined />, [
+      getItem('Account Detail', 'account', <AccountBookOutlined />),
+      getItem('Order History', 'order', <ProfileOutlined />),
+      getItem('Your Payments', 'account/payment', <DollarOutlined />)
+    ]),
     getItem('About us', 'about', <ContactsOutlined />),
   ];
   
@@ -35,9 +38,11 @@ export default function Nav(props) {
       minHeight: '600px'
     }}
     defaultSelectedKeys="home"
-    mode="vertical"
+    defaultOpenKeys={['account']}
+    mode="inline"
     items={items}
     onClick={goTo}
+   
     />;
 };
 

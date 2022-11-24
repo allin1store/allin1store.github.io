@@ -32,8 +32,20 @@ const Checkout = (props) => {
             "payment": "5100910051003189",
             "items":cart
         };
+        user.order.push(order);
+        user.cart.splice(0, user.cart.length);
+        window.sessionStorage.setItem("currentUser", JSON.stringify(user));
         window.sessionStorage.setItem("currentOrder", JSON.stringify(order));
         navigate("/orderDetail");
+    }
+
+    function getTotalPrice() {
+        let price = 0;
+        for (let i = 0; i < cart.length; i++) {
+            price += cart[i].salePrice;
+        }
+        console.log("total", price);
+        return price;
     }
    
     return <div className={CheckoutCss.container}>
@@ -73,8 +85,8 @@ const Checkout = (props) => {
                     </Radio.Group>
                 </div>
                 <div className={CheckoutCss.step3}>
-                    <span className={CheckoutCss.caption}>
-                        3. Review items
+                    <span className={CheckoutCss.caption} style={{width: "100%", display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                        3. Review items  <span style={{color: "red", textAlign: "right"}}><div>Total Price: $ {getTotalPrice()}</div><div>Tax: $ {getTotalPrice() * 0.05}</div></span>
                     </span>
                     {cart.map((item, index) => (
                     <div className={CheckoutCss.item} key={item.image + index}>
@@ -108,7 +120,6 @@ const Checkout = (props) => {
             </div>
         </div>
     </div>;
-    
 }
 
 

@@ -8,14 +8,21 @@ import {AppContext} from "../../App.js";
 const Cart = (props) => {
     const navigate = useNavigate();
     const { number, setNumber } = useContext(AppContext);
-   let user = JSON.parse(window.sessionStorage.getItem("currentUser"));
-    console.log(user.cart);
-   const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState([]);
 
-   useEffect(()=>{
-       setCart(user.cart);
-   },[]);
-   
+    useEffect(()=>{
+        setCart((user == null || user == undefined) ? "": user.cart);
+    },[]);
+   let user = JSON.parse(window.sessionStorage.getItem("currentUser"));
+    if (user == null || user == undefined) {
+        return <div className={CartCss.container1}>
+        You are not logged in.
+        <Button type="default" htmlType="submit" onClick={() => navigate("/signin")}>
+          Sign in
+        </Button>
+    </div>;
+    }
+    
    function remove(it, ind) {
         cart.splice(ind, 1);
         setCart(cart);

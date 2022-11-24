@@ -5,14 +5,14 @@
 
 .left {
     width: 70%;
-    height: 94%;
+    height: 93%;
     margin: 1%;
     background-color: white;
 }
 
 .right {
     width: 30%;
-    height: 94%;
+    height: 93%;
     margin-top: 1%;
     margin-right: 1%;
     margin-bottom: 1%;
@@ -38,58 +38,30 @@
     border-radius: 2px;
 }
 
-.step1 {
-    border-bottom: 1px solid lightgray;
-    text-align: left;
-    padding: 5%;
+.item {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 3%;
+    margin-top: 1%;
+    display: flex;
+    width: 98%;
+    border: 0px;
+    justify-content: space-between;
+    padding: 10px
 }
 
-.step2 {
-    border-bottom: 1px solid lightgray;
-    text-align: left;
-    padding: 5%;
+.item button {
+    margin-top: 4%;
 }
-
-.step3 {
-    text-align: left;
-    padding: 5%;
-}
-
-
-.caption {
-    margin-right: 65%;
-    font-size: large;
-    font-weight: bolder;
-    height: 100%
-}
-
-.card {
-    background-color: blue;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 200px;
-    text-align: left;
-}
-
-.card2 {
-    background-color: Black;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 200px;
-    text-align: left;
-}
-
 .img {
-    width: 70px;
-    height: 70px;
-    margin: 3%;
+    width: 180px;
+    height: 120px;
 }
 
-.img img {
-    width: 65px;
-    height: 65px;
+img {
+    width: 140px;
+    height: 120px;
+    margin: 6%;
 }
 
 .name {
@@ -111,12 +83,37 @@
     justify-content: space-between;
 }
 
-.item {
-    border-bottom: 1px solid lightgray;
-    display: flex;
+.caption {
+    margin-right: 65%;
+    font-size: large;
+    font-weight: bolder;
+    height: 100%
 }
 
 .buttons {
     border-radius: 5px;
-    width: 70%
+    width: 90%
+}
+
+.card {
+    font-weight: bold;
+    border-radius: 10px;
+    width: 95%;
+    text-align: left;
+    height: 250px
+}
+
+.card2 {
+    background-color: Black;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 200px;
+    text-align: left;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
 }

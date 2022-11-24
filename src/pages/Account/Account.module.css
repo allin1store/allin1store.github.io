@@ -1,3 +1,61 @@
 .container {
-    background-color: red;
+    height: 100%
+}
+
+.crumb {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: large;
+    width: auto;
+    background-color: white;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
+.caption {
+    margin-right: 65%;
+    font-size: large;
+    font-weight: bolder;
+    height: 100%
+}
+
+.content {
+    width: 47%;
+    margin-left: 1%;
+    margin-top: 20px;
+    background-color: white;
+    height: 91%;
+    padding: 30px;
+}
+
+.content .logout {
+    border-radius: 5px;
+    width: 70%;
+    font-weight: bold
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+.item label {
+    font-size: 15px;
+    font-weight: bolder;
+}
+.item span {
+    text-align: left;
+}
+.item button {
+    border-radius: 5px;
+}
+
+.main {
+    display: flex;
+    height: 100%
 }

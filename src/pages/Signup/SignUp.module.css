@@ -1,0 +1,34 @@
+.crumb {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: large;
+    width: auto;
+    background-color: white;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
+.form {
+    width: auto;
+    margin: 1%;
+    padding: 2%;
+    background-color: white;
+}
+
+.formItem {
+    width: 30%;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.button {
+    width: 30%;
+    border-radius: 5px;
+    margin-left: 1%;
+    position: relative;
+    left: -30%;
+}
+

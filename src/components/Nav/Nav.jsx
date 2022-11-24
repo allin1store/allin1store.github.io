@@ -15,14 +15,13 @@ export default function Nav(props) {
       type,
     };
   }
-  
+
   function goTo(target) {
-    props.handleChosenItem();
-    props.handleChosenCategory();
     // console.log(target);
     navigate(target.key);
   }
   
+  const navigate = useNavigate();
   const items = [
     getItem('Home', 'home', <HomeOutlined />),
     getItem('Shopping', 'shopping', <ShoppingOutlined />),
@@ -31,9 +30,7 @@ export default function Nav(props) {
     getItem('About us', 'about', <ContactsOutlined />),
   ];
   
-    const navigate = useNavigate();
-    return <Menu
-    style={{
+    return <Menu style={{
       width: '15%',
       minHeight: '600px'
     }}
@@ -41,6 +38,6 @@ export default function Nav(props) {
     mode="vertical"
     items={items}
     onClick={goTo}
-    />
+    />;
 };
 

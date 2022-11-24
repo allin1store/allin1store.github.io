@@ -1,0 +1,28 @@
+{
+    "firstName":"Qi",
+    "lastName":"Xu",
+    "email":"qixu2022@outlook.com", 
+    "phoneNumber":"778-220-2929", 
+    "address": "2555 Mclekskks Ave", 
+    "userType": "Customer",
+    "cart": [],
+    "payment": [
+        {
+            "name": "RBC bank",
+            "number": "5100910051009600",
+            "valida": "11/25",
+            "holder": "Qi Xu",
+            "cvv": "666",
+            "type": "Credit Card"
+        },
+
+        {
+            "name": "BMO bank",
+            "number": "5100910051003189",
+            "valida": "11/25",
+            "holder": "Qi Xu",
+            "cvv": "666",
+            "type": "Debit Card"
+        }
+    ]
+}

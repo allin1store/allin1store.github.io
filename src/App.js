@@ -14,6 +14,7 @@ import Checkout from './pages/Checkout/Checkout'
 import Account from './pages/Account/Account'
 import Payment from './pages/Payment/Payment'
 import PaymentDetail from './pages/PaymentDetail/PaymentDetail'
+import OrderDetail from './pages/OrderDetail/OrderDetail'
 import Signin from './pages/Signin/Signin';
 import About from './pages/About/About'
 import SignUp from "./pages/Signup/SignUp"
@@ -231,6 +232,7 @@ getUsers();
             <Route path="/account/payment" element={<Payment/>}/>
             <Route path="/detailPayment" element={<PaymentDetail/>}/>
             <Route path="/checkout" element={<Checkout/>}></Route>
+            <Route path="/orderDetail" element={<OrderDetail/>}></Route>
           </Routes>
         </div>
       </div>

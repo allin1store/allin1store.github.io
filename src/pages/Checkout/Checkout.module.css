@@ -38,32 +38,59 @@
     border-radius: 2px;
 }
 
-.item {
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-bottom: 3%;
-    margin-top: 1%;
-    height: 140px;
-    display: flex;
-    width: 98%;
-    border: 0px;
+.step1 {
     border-bottom: 1px solid lightgray;
-    justify-content: space-between;
-    padding: 10px
+    text-align: left;
+    padding: 5%;
 }
 
-.item button {
-    margin-top: 4%;
+.step2 {
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+    padding: 5%;
 }
+
+.step3 {
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+    padding: 5%;
+}
+
+
+.caption {
+    margin-right: 65%;
+    font-size: large;
+    font-weight: bolder;
+    height: 100%
+}
+
+.card {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 200px;
+    text-align: left;
+}
+
+.card2 {
+    background-color: Black;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 200px;
+    text-align: left;
+}
+
 .img {
-    width: 180px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
+    margin: 3%;
 }
 
-img {
-    width: 140px;
-    height: 120px;
-    margin: 6%;
+.img img {
+    width: 65px;
+    height: 65px;
 }
 
 .name {
@@ -85,38 +112,12 @@ img {
     justify-content: space-between;
 }
 
-.caption {
-    margin-right: 65%;
-    font-size: large;
-    font-weight: bolder;
-    height: 100%
+.item {
+    border-bottom: 1px solid lightgray;
+    display: flex;
 }
 
 .buttons {
     border-radius: 5px;
-    width: 90%
-}
-
-.card {
-    background-color: blue;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 200px;
-    text-align: left;
-}
-
-.card2 {
-    background-color: Black;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 200px;
-    text-align: left;
-}
-
-.buttonGroup {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1%;
+    width: 70%
 }

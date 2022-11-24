@@ -8,22 +8,17 @@ import {AppContext} from "../../App.js";
 const Account = (props) => {
     const { name, setName } = useContext(AppContext)
     const navigate = useNavigate();
-    function goToSignin() {
-        navigate("/signin");
-    };
-    function goToHome() {
-        navigate("/home");
-    };
+
     function logout() {
         window.sessionStorage.removeItem("currentUser");
         setName("");
-        goToHome();
+        navigate("/home");
     };
     let currentUser = JSON.parse(window.sessionStorage.getItem("currentUser"));
     if (currentUser == null || currentUser == undefined) {
         return <div className={AccountCss.container1}>
             You are not logged in.
-            <Button type="default" htmlType="submit" onClick={goToSignin}>
+            <Button type="default" htmlType="submit" onClick={() => navigate("/signin")}>
               Sign in
             </Button>
         </div>
@@ -87,11 +82,11 @@ const Account = (props) => {
         <div className={AccountCss.content}>
             <span className={AccountCss.caption}>Operations</span>
             <br></br><br></br>
-            <Button onClick={() => navigate("/payment")} type="default" className={AccountCss.logout}>Payment management</Button>
+            <Button onClick={() => navigate("/account/payment")} type="default" className={AccountCss.logout}>Your Payments</Button>
             <br></br>
-            <Button onClick={logout} type="default" className={AccountCss.logout}>Order history</Button>
+            <Button onClick={() => navigate("/order")} type="default" className={AccountCss.logout}>Order history</Button>
             <br></br>
-            <Button onClick={logout} danger type="primary" className={AccountCss.logout}>Log out</Button>
+            <Button onClick={() => logout} danger type="primary" className={AccountCss.logout}>Log out</Button>
         </div>
 
         </div>

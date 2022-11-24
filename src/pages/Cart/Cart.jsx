@@ -70,7 +70,7 @@ const Cart = (props) => {
                 <br></br><br></br>
                 <Button danger type="primary" className={CartCss.buttons} onClick={() => clear()}>Empty &nbsp;Chart</Button>
                 <br></br><br></br>
-                <Button type="primary" className={CartCss.buttons}>Proceed to Checkout</Button>
+                <Button type="primary" className={CartCss.buttons} onClick={() => cart.length !=0 ? navigate("/checkout"): console.log("")}>Proceed to Checkout</Button>
             </div>
         </div>
     </div>;

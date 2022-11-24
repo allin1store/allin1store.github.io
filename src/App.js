@@ -10,7 +10,10 @@ import Shopping from './pages/Shopping/Shopping'
 import Product from './pages/Shopping/Product'
 import Order from './pages/Order/Order'
 import Cart from './pages/Cart/Cart'
+import Checkout from './pages/Checkout/Checkout'
 import Account from './pages/Account/Account'
+import Payment from './pages/Payment/Payment'
+import PaymentDetail from './pages/PaymentDetail/PaymentDetail'
 import Signin from './pages/Signin/Signin';
 import About from './pages/About/About'
 import SignUp from "./pages/Signup/SignUp"
@@ -22,24 +25,6 @@ export const AppContext = React.createContext({});
 function App() {
   const [name, setName] = useState()
   const [number, setNumber] = useState();
-  
-  const [ chosenItem, setChosenItem ] = useState("");
-  const [chosenCategory, setChosenCategory] = useState("");
-
-  const [chosenId, setChosenId] = useState("");
-  
-/*  const handleChosenCategory = (cat) =>{
-    setChosenCategory(cat);
-  }
-
-  const handleChosenItem = (item) => {
-    setChosenItem(item);
-  }
-
-  const handleChosenId = (id) => {
-    setChosenId(id);
-  }
-  */
 
   const getUsers =() => {
     fetch('/Users/users.json',
@@ -243,7 +228,9 @@ getUsers();
             <Route path="/about" element={<About a="123"/>}/>
             <Route path="*" element={<Home/>}/>
 		    <Route path="/signup" element={<SignUp a="123"/>}/>
-            <Route path="/payment" element={<SignUp a="123"/>}/>
+            <Route path="/account/payment" element={<Payment/>}/>
+            <Route path="/detailPayment" element={<PaymentDetail/>}/>
+            <Route path="/checkout" element={<Checkout/>}></Route>
           </Routes>
         </div>
       </div>

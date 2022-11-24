@@ -49,7 +49,6 @@
     border: 0px;
     border-bottom: 1px solid lightgray;
     justify-content: space-between;
-    padding: 10px
 }
 
 .item button {
@@ -97,26 +96,16 @@ img {
     width: 90%
 }
 
-.card {
-    background-color: blue;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 200px;
-    text-align: left;
+
+.form {
+    width: auto;
+    margin: 1%;
+    padding: 2%;
+    background-color: white;
 }
 
-.card2 {
-    background-color: Black;
-    color: white;
+.formItem {
+    width: 40%;
     font-weight: bold;
-    border-radius: 10px;
-    width: 200px;
-    text-align: left;
-}
-
-.buttonGroup {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1%;
+    margin-left: 5%;
 }

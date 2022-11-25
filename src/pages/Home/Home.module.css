@@ -11,27 +11,10 @@
     border-radius: 2px;
 }
 
-button {
-    border-radius: 5px;
-}
-
-.table{
-    width: 500px;
-    table-layout: fixed;
-}
-
-.table .content {
-    width: 200px;
-}
-
-.table td {
-    overflow-x: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
 .container {
     background-color: white;
+    width: 98%;
+    height: 90%;
     margin: 1%;
-    height: 800px;
+    padding: 1%
 }

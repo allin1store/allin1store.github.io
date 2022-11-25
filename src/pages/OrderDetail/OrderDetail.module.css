@@ -5,14 +5,17 @@
 
 .left {
     width: 70%;
-    height: 94%;
+    height: 90%;
     margin: 1%;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
 }
 
 .right {
     width: 30%;
-    height: 94%;
+    height: 90%;
     margin-top: 1%;
     margin-right: 1%;
     margin-bottom: 1%;
@@ -38,24 +41,6 @@
     border-radius: 2px;
 }
 
-.step1 {
-    border-bottom: 1px solid lightgray;
-    text-align: left;
-    padding: 5%;
-}
-
-.step2 {
-    border-bottom: 1px solid lightgray;
-    text-align: left;
-    padding: 5%;
-}
-
-.step3 {
-    text-align: left;
-    padding: 5%;
-}
-
-
 .caption {
     margin-right: 65%;
     font-size: large;
@@ -63,22 +48,30 @@
     height: 100%
 }
 
-.card {
-    background-color: blue;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 200px;
+.info {
+    margin-left: 17%;
+    width: 70%;
     text-align: left;
+    font-size: 17px;
 }
 
-.card2 {
-    background-color: Black;
-    color: white;
+.info label {
     font-weight: bold;
-    border-radius: 10px;
-    width: 200px;
-    text-align: left;
+}
+
+.item1 {
+    display: block;
+    margin-bottom: 5%;
+}
+
+.step1 {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+}
+
+.step2 {
+    margin-top: 2%;
 }
 
 .img {
@@ -114,8 +107,8 @@
 .item {
     border-bottom: 1px solid lightgray;
     display: flex;
+    text-align: left;
 }
-
 .buttons {
     border-radius: 5px;
     width: 70%

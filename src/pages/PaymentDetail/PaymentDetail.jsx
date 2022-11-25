@@ -1,9 +1,8 @@
 import PaymentDetailCss from "./PaymentDetail.module.css"
 import { Breadcrumb, Button, Form, Input, Select, } from "antd";
-import React, {useContext} from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
-import {AppContext} from "../../App.js";
 
 const PaymentDetail = (props) => {
     const navigate = useNavigate();

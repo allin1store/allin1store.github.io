@@ -8,14 +8,21 @@ import {AppContext} from "../../App.js";
 const Cart = (props) => {
     const navigate = useNavigate();
     const { number, setNumber } = useContext(AppContext);
-   let user = JSON.parse(window.sessionStorage.getItem("currentUser"));
-    console.log(user.cart);
-   const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState([]);
 
-   useEffect(()=>{
-       setCart(user.cart);
-   },[]);
-   
+    useEffect(()=>{
+        setCart((user == null || user == undefined) ? "": user.cart);
+    },[]);
+   let user = JSON.parse(window.sessionStorage.getItem("currentUser"));
+    if (user == null || user == undefined) {
+        return <div className={CartCss.container1}>
+        You are not logged in.
+        <Button type="default" htmlType="submit" onClick={() => navigate("/signin")}>
+          Sign in
+        </Button>
+    </div>;
+    }
+    
    function remove(it, ind) {
         cart.splice(ind, 1);
         setCart(cart);
@@ -68,7 +75,7 @@ const Cart = (props) => {
             <div className={CartCss.right}>
                 <span className={CartCss.caption}>Operations</span>
                 <br></br><br></br>
-                <Button danger type="primary" className={CartCss.buttons} onClick={() => clear()}>Empty &nbsp;Chart</Button>
+                <Button danger type="primary" className={CartCss.buttons} onClick={() => clear()}>Empty &nbsp;Cart</Button>
                 <br></br><br></br>
                 <Button type="primary" className={CartCss.buttons} onClick={() => cart.length !=0 ? navigate("/checkout"): console.log("")}>Proceed to Checkout</Button>
             </div>

@@ -48,6 +48,19 @@ export default function Product() {
             }
         }
 
+        function goCheckout(item) {
+            let user = JSON.parse(window.sessionStorage.getItem("currentUser"));
+            if (user == null || user == undefined) {
+                navigate("/signin");
+            }
+            else {
+                user.cart.push(item);
+                setNumber(user.cart.length);
+                window.sessionStorage.setItem("currentUser", JSON.stringify(user));
+            }
+            navigate("/checkout");
+        }
+
     const productOverview=(
         <>
         <div className="upperDiv">
@@ -62,7 +75,7 @@ export default function Product() {
                     <li key="quantity">Quantity: {3+Math.floor(Math.random()*20)}</li>
                     <li key="buy">
                         <Button onClick={(e) => {addToCart(chosenItem)}}>Add to cart</Button>
-                        <Button>Buy now</Button>
+                        <Button onClick={() => {goCheckout(chosenItem)}}>Buy now</Button>
                         <Popover content={content}>
                             <Button type="primary">Price Comparison</Button>
                         </Popover>
@@ -89,16 +102,18 @@ export default function Product() {
                 <Breadcrumb.Item onClick={()=> navigate("/shopping")} style={{cursor: 'pointer'}}>Shopping</Breadcrumb.Item>
                 <Breadcrumb.Item>Product</Breadcrumb.Item>
             </Breadcrumb>
-            <div className="productPage">
+            <div className={ProductCss.container}>
+                <div className="productPage">
             
-            {chosenItem=== "" ? 
-            <>
-            <p>Sorry, product not found...</p>
-            <Link to="/shopping">Shop now</Link> 
-            </>
+                    {chosenItem=== "" ? 
+                    <>
+                    <p>Sorry, product not found...</p>
+                    <Button onClick={() => navigate("/shopping")}>Shop now</Button> 
+                    </>
             
-            : productOverview}
-        </div>
+                    : productOverview}
+                </div>
+            </div>
         </div>
         
     );

@@ -1,5 +1,5 @@
 import CheckoutCss from "./Checkout.module.css"
-import { Breadcrumb, Button, Card} from "antd";
+import { Breadcrumb, Button, Card, Radio} from "antd";
 import React, {useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
@@ -8,12 +8,46 @@ const Checkout = (props) => {
     const navigate = useNavigate();
     let user = JSON.parse(window.sessionStorage.getItem("currentUser"));
     const [payment, setPayment] = useState([]);
+    const [cart, setCart] = useState([]);
+
+    const [value, setValue] = useState(1);
 
    useEffect(()=>{
        setPayment(user.payment);
+       setCart(user.cart);
    },[]);
-   
 
+   function onChange(e) {
+    console.log('radio checked', e.target.value);
+    setValue(e.target.value);
+   }
+
+    function placeOrder() {
+        console.log(cart);
+        let order = {
+            "number": "20221124XXXXX",
+            "status": 3,
+            "placed_time": "2022-11-24",
+            "delivered_time": "2022-12-20",
+            "payment": "5100910051003189",
+            "items":cart
+        };
+        user.order.push(order);
+        user.cart.splice(0, user.cart.length);
+        window.sessionStorage.setItem("currentUser", JSON.stringify(user));
+        window.sessionStorage.setItem("currentOrder", JSON.stringify(order));
+        navigate("/orderDetail");
+    }
+
+    function getTotalPrice() {
+        let price = 0;
+        for (let i = 0; i < cart.length; i++) {
+            price += cart[i].salePrice;
+        }
+        console.log("total", price);
+        return price;
+    }
+   
     return <div className={CheckoutCss.container}>
         <Breadcrumb className={CheckoutCss.crumb}>
             <Breadcrumb.Item onClick={()=> navigate("/cart")} style={{cursor: 'pointer'}}>Cart</Breadcrumb.Item>
@@ -21,43 +55,71 @@ const Checkout = (props) => {
         </Breadcrumb>
         <div className={CheckoutCss.main}>
             <div className={CheckoutCss.left}>
-                <div>
+                <div className={CheckoutCss.step1}>
                     <span className={CheckoutCss.caption}>
                         1. Shipping address
                     </span>
-                    <span>{user.name}</span>
-                    <span>{user.phone}</span>
-                    <span>{user.address}</span>
+                    <br></br><br></br>
+                    <div>{user.firstName}&nbsp;&nbsp;{user.lastName}</div>
+                    <br></br>
+                    <div>{user.phoneNumber}</div>
+                    <br></br>
+                    <div>{user.address}</div>
                 </div>
-
-
-                {payment.map((item, index) => (
+                <div className={CheckoutCss.step2}>
+                    <span className={CheckoutCss.caption}>
+                        2. Payment method
+                    </span>
+                    <br></br><br></br>
+                    <Radio.Group onChange={(e) => onChange(e)} value={value}>
+                    {payment.map((item1, index) => (
+                        <Radio value={item1.number} key={item1.number}>
+                            <div className={CheckoutCss.item1} key={item1.image + index}>
+                            <Card bordered={false} className={index/2 ==0 ?CheckoutCss.card: CheckoutCss.card2}>
+                                <p>{item1.type}</p>
+                                <p>{item1.name} &nbsp;&nbsp;&nbsp; {"****  " + item1.number.substr(12)} </p>
+                            </Card>
+                            </div>
+                        </Radio>
+                    ))}
+                    </Radio.Group>
+                </div>
+                <div className={CheckoutCss.step3}>
+                    <span className={CheckoutCss.caption} style={{width: "100%", display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                        3. Review items  <span style={{color: "red", textAlign: "right"}}><div>Total Price: $ {getTotalPrice()}</div><div>Tax: $ {getTotalPrice() * 0.05}</div></span>
+                    </span>
+                    {cart.map((item, index) => (
                     <div className={CheckoutCss.item} key={item.image + index}>
-                        <Card bordered={false} className={index/2 ==0 ?CheckoutCss.card: CheckoutCss.card2}>
-                            <p>{item.type}</p>
-                            <p>{item.name} &nbsp;&nbsp;&nbsp; {"****  " + item.number.substr(12)} </p>
-                        </Card>
-                        <div className={CheckoutCss.buttonGroup}>
-                            <Button type="default" htmlType="button">
-                                Remove
-                            </Button>
-                            <Button type="default" htmlType="button">
-                                Edit
-                            </Button>
+                        <div className={CheckoutCss.img}>
+                            <img alt={item.name} src={item.image}/>
                         </div>
-                        
+                        <div>
+                            <div className={CheckoutCss.name}>
+                                {item.name}
+                            </div>
+                            <div  className={CheckoutCss.else}>
+                                <span className={CheckoutCss.manu}>
+                                    {item.manufacturer}
+                                </span>
+                                <span className={CheckoutCss.price}>
+                                    $ {item.salePrice}
+                                </span>
+                                <span style={{fontWeight: 'bolder'}}>
+                                    Quantity: 1
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                ))}
-            
+                    ))}
+                </div>
             </div>
             <div className={CheckoutCss.right}>
                 <span className={CheckoutCss.caption}>Operations</span>
                 <br></br><br></br>
-                <Button type="primary" className={CheckoutCss.buttons} onClick={() => navigate("/orderDetail")}>Place your order</Button>
+                <Button type="primary" className={CheckoutCss.buttons} onClick={() => placeOrder()}>Place your order</Button>
             </div>
         </div>
     </div>;
-    
 }
 
 

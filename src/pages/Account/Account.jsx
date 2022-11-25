@@ -86,7 +86,7 @@ const Account = (props) => {
             <br></br>
             <Button onClick={() => navigate("/order")} type="default" className={AccountCss.logout}>Order history</Button>
             <br></br>
-            <Button onClick={() => logout} danger type="primary" className={AccountCss.logout}>Log out</Button>
+            <Button onClick={() => logout()} danger type="primary" className={AccountCss.logout}>Log out</Button>
         </div>
 
         </div>

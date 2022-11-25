@@ -25,37 +25,58 @@ export default function Shopping(props) {
         navigate("/product/" + item.sku);
     }
     const type0Page=(<div>
+        <h2>Featured Laptop</h2>
         <div className="featureItems">
-            <h2>Featured Laptop:</h2>
             <ul className={ShoppingCss.randomItem}>
             {randomLatopList.map(item => (
-                <li key={item.sku} onClick={()=> goToProduct(item)}><span><img src={item.image} alt={item.name}/></span> <span>{item.name}</span></li>
+                <li className={ShoppingCss.catItem} key={item.sku} onClick={()=> goToProduct(item)}>
+                    <div className={ShoppingCss.item}>
+                        <span><img src={item.image} alt={item.name}/></span> 
+                        <span>{item.name}</span> 
+                        <span className={ShoppingCss.price}>${item.salePrice}</span>
+                    </div>
+                </li>
             ))}
             </ul>
+            <span>&nbsp;</span>
         </div>
+        <h2>Featured Desktop</h2>
         <div className="featureItems">
-    <h2>Featured Desktop:</h2>
-    <ul className={ShoppingCss.randomItem}>
-        {randomDesktopList.map(item => (
-            <li key={item.sku} onClick={()=> goToProduct(item)}><span><img src={item.image} alt={item.name}/></span> <span>{item.name}</span></li>
-        ))}
-    </ul>
-    </div>
-    <div className="featureItems">
-    <h2>Featured Tablet:</h2>
-    <ul className={ShoppingCss.randomItem}>
-        {randomTabletList.map(item => (
-            <li key={item.sku} onClick={()=> goToProduct(item)}><span><img src={item.image} alt={item.name}/></span> <span>{item.name}</span></li>
-        ))}
-    </ul>
-    </div>
+            <ul className={ShoppingCss.randomItem}>
+                {randomDesktopList.map(item => (
+                    <li className={ShoppingCss.catItem} key={item.sku} onClick={()=> goToProduct(item)}>
+                        <span><img src={item.image} alt={item.name}/></span>
+                        <span>{item.name}</span>
+                        <span className={ShoppingCss.price}>${item.salePrice}</span>
+                    </li>
+                ))}
+            </ul>
+            <span>&nbsp;</span>
+        </div>
+        <h2>Featured Tablet</h2>
+        <div className="featureItems">
+            <ul className={ShoppingCss.randomItem}>
+                {randomTabletList.map(item => (
+                    <li className={ShoppingCss.catItem} key={item.sku} onClick={()=> goToProduct(item)}>
+                        <span><img src={item.image} alt={item.name}/></span>
+                        <span>{item.name}</span>
+                        <span className={ShoppingCss.price}>${item.salePrice}</span>
+                    </li>
+                ))}
+            </ul>
+            <span>&nbsp;</span>
+        </div>
     </div>);
 
     const categoryPage=(
         <div className={ShoppingCss.catList}>
             <ul className={ShoppingCss.randomItem}>
             {catList.map(item=>(
-                    <li className={ShoppingCss.catItem} key={item.sku} onClick={()=> goToProduct(item)}><span><img src={item.image} alt={item.name}/></span> <span>{item.name}</span></li>
+                    <li className={ShoppingCss.catItem} key={item.sku} onClick={()=> goToProduct(item)}>
+                            <span><img src={item.image} alt={item.name}/></span>
+                            <span>{item.name}</span>
+                            <span className={ShoppingCss.price}>${item.salePrice}</span>
+                    </li>
             ))}
                 
         </ul>
@@ -67,15 +88,15 @@ export default function Shopping(props) {
                 <Breadcrumb.Item onClick={()=> navigate("/shopping")} style={{cursor: 'pointer'}}>Shopping</Breadcrumb.Item>
             </Breadcrumb>
             <div className={ShoppingCss.listPage}>
-            <div className={ShoppingCss.category}>
-                <span onClick={() => {setCatList(JSON.parse(window.sessionStorage.getItem("categoryDesktop"))); setListType(1)}}>Desktop</span>
-                <span onClick={() => {setCatList(JSON.parse(window.sessionStorage.getItem("categoryTablet"))); setListType(2)}}>Tablets</span>
-                <span onClick={() => {setCatList(JSON.parse(window.sessionStorage.getItem("categoryLaptop"))); setListType(3)}}>Laptops</span>
-            </div>
-            <div className="randomLists">
-                {listType == 0?type0Page:categoryPage}
-                <Button onClick={()=>{window.scrollTo(0, 0)}}>Top</Button>
-            </div>
+                <div className={ShoppingCss.category}>
+                    <span className={listType == 1 ? ShoppingCss.highlight : ""} onClick={() => {setCatList(JSON.parse(window.sessionStorage.getItem("categoryDesktop"))); setListType(1)}}>Desktop</span>
+                    <span className={listType == 2 ? ShoppingCss.highlight : ""} onClick={() => {setCatList(JSON.parse(window.sessionStorage.getItem("categoryTablet"))); setListType(2)}}>Tablets</span>
+                    <span className={listType == 3 ? ShoppingCss.highlight : ""} onClick={() => {setCatList(JSON.parse(window.sessionStorage.getItem("categoryLaptop"))); setListType(3)}}>Laptops</span>
+                </div>
+                <div className="randomLists">
+                    {listType == 0?type0Page:categoryPage}
+                    <Button onClick={()=>{window.scrollTo(0, 0)}}>Top</Button>
+                </div>
             </div>
             
         </div>

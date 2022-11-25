@@ -35,3 +35,29 @@ button {
     margin: 1%;
     height: 800px;
 }
+
+.prodImg {
+    max-width: 320px;
+    max-height: 320px;
+    width: auto;
+    height: auto;
+}
+
+.container h2 {
+    text-align: left;
+}
+
+.detail {
+    max-width: 600px;
+}
+
+.btnAddToCart, .buyNow {
+    background-color: #f1da43;
+    border: 0;
+    color:black;
+}
+
+.btnAddToCart:hover, .buyNow:hover {
+    background-color: #ffe854;
+    color:black;
+}

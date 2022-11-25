@@ -1,3 +1,8 @@
+.listPage h2 {
+    color: rgb(65, 84, 228);
+    font-size: 1.4rem;
+}
+
 .crumb {
     margin-top: 5px;
     margin-left: 10px;
@@ -21,30 +26,41 @@
 .category {
     margin: 1%;
     width: auto;
-    background-color: #FFD814;
+    background-color: #f1da43;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:space-evenly;
     align-items: center;
     height: 50px;
     border-radius: 5px;
 }
 
 .category span {
-    border: 1px solid black;
+    width: 100%;
     cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 162px;
     padding-right: 162px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.category span:not(span:last-of-type) {
     border-top: 0px;
     border-bottom: 0px;
     border-left: 0px;
     border-right: 1px solid lightslategray;
-    font-size: 15px;
-    font-weight: bold;
 }
 
+.category span:hover {
+    font-size: 1.2rem;
+}
+
+.category .highlight {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
 
 .randomItem span{
     display: block;
@@ -55,7 +71,10 @@
     cursor: pointer;
 }
 .randomItem img {
-    height: 100px;
+    max-width:150px;
+    max-height:150px;
+    width: auto;
+    height: auto;
 }
 
 .randomItem {
@@ -78,4 +97,16 @@
 
 .catList span {
     width: 300px;
+}
+
+.price {
+    color: rgb(40, 36, 36);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.catItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }

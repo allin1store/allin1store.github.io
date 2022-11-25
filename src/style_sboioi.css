@@ -1,4 +1,4 @@
-/* proucts.jsx */
+/* products.jsx */
 .productPage{
     width: 80vw;
     margin: auto;
@@ -10,15 +10,15 @@
 
 .upperDiv{
     display: flex;
+    justify-content: space-between;
     padding: 3rem;
-    margin:auto;
-}
-.upperDiv span, .upperDiv ul{
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
     text-align: left;
 }
+
+.upperDiv span, .upperDiv ul{
+    flex-grow: 1;
+}
+
 .backButton{
     margin: auto;
     margin-top: 3rem;
@@ -32,7 +32,11 @@
     margin-bottom: 1rem;
     text-align: left;
 }
-/* proucts buttons */
+.productOverview table td {
+    padding: 0.5rem;
+}
+
+/* products buttons */
 .lowerDiv{
     flex-direction: column;
 }

@@ -1,0 +1,1556 @@
+{
+    "firstName":"Qi",
+    "lastName":"Xu",
+    "email":"qixu2022@outlook.com", 
+    "phoneNumber":"778-220-2929", 
+    "address": "2555 Mclekskks Ave", 
+    "userType": "Customer",
+    "cart": [],
+    "payment": [
+        {
+            "name": "RBC bank",
+            "number": "5100910051009600",
+            "valida": "11/25",
+            "holder": "Qi Xu",
+            "cvv": "666",
+            "type": "Credit Card"
+        },
+
+        {
+            "name": "BMO bank",
+            "number": "5100910051003189",
+            "valida": "11/25",
+            "holder": "Qi Xu",
+            "cvv": "666",
+            "type": "Debit Card"
+        }
+    ],
+    "order": [
+        {
+            "number": "2022112455555",
+            "status": 5,
+            "placed_time": "2022-11-24",
+            "delivered_time": "2022-12-20",
+            "payment": "5100910051003189",
+            "items":[
+                    {
+                        "name": "Apple - MacBook Pro - 13\" Display with Touch Bar - Intel Core i7 - 8GB Memory - 1TB SSD - Silver",
+                        "sku": 6394471,
+                        "image": "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/6394/6394471_sd.jpg",
+                        "manufacturer": "Apple",
+                        "detail": "Apple MacBook Pro Laptop: Power through the biggest of jobs using this MacBook Pro laptop. Rapid Intel Core i7 processing and 8GB of RAM ensure outstandingly fast speeds for applications, while the 13-inch Retina display ensures maximum vibrancy and detail. This MacBook Pro laptop has lots of high-performance storage for your files and Intel Iris Plus Graphics 645 integrated graphics for easy creative editing.",
+                        "regularPrice": 2199,
+                        "salePrice": 1759.99
+                    },
+                    {
+                        "name": "Apple - MacBook Pro - 13\" Display with Touch Bar - Intel Core i7 - 8GB Memory - 1TB SSD - Silver",
+                        "sku": 6394471,
+                        "image": "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/6394/6394471_sd.jpg",
+                        "manufacturer": "Apple",
+                        "detail": "Apple MacBook Pro Laptop: Power through the biggest of jobs using this MacBook Pro laptop. Rapid Intel Core i7 processing and 8GB of RAM ensure outstandingly fast speeds for applications, while the 13-inch Retina display ensures maximum vibrancy and detail. This MacBook Pro laptop has lots of high-performance storage for your files and Intel Iris Plus Graphics 645 integrated graphics for easy creative editing.",
+                        "regularPrice": 2199,
+                        "salePrice": 1759.99
+                    },
+                    {
+                        "categoryPath": [
+                            {
+                                "id": "cat00000",
+                                "name": "Best Buy"
+                            },
+                            {
+                                "id": "abcat0500000",
+                                "name": "Computers & Tablets"
+                            },
+                            {
+                                "id": "pcmcat209000050006",
+                                "name": "Tablets"
+                            },
+                            {
+                                "id": "pcmcat209000050008",
+                                "name": "All Tablets"
+                            }
+                        ],
+                        "color": "Space Gray",
+                        "condition": "New",
+                        "description": null,
+                        "details": [
+                            {
+                                "name": "Screen Type",
+                                "value": "Retina Display",
+                                "values": [
+                                    "Retina Display"
+                                ]
+                            },
+                            {
+                                "name": "Front Facing Camera Megapixels",
+                                "value": "12 megapixels",
+                                "values": [
+                                    "12 megapixels"
+                                ]
+                            },
+                            {
+                                "name": "Expandable Memory Compatibility",
+                                "value": "None",
+                                "values": [
+                                    "None"
+                                ]
+                            },
+                            {
+                                "name": "Front Facing Camera Video Resolution",
+                                "value": "1080p",
+                                "values": [
+                                    "1080p"
+                                ]
+                            },
+                            {
+                                "name": "Front-Facing Camera",
+                                "value": "Yes",
+                                "values": [
+                                    "Yes"
+                                ]
+                            },
+                            {
+                                "name": "Stylus Included",
+                                "value": "No",
+                                "values": [
+                                    "No"
+                                ]
+                            },
+                            {
+                                "name": "Rear-Facing Camera",
+                                "value": "Yes",
+                                "values": [
+                                    "Yes"
+                                ]
+                            },
+                            {
+                                "name": "System Memory (RAM)",
+                                "value": "8 gigabytes",
+                                "values": [
+                                    "8 gigabytes"
+                                ]
+                            },
+                            {
+                                "name": "Rear Facing Camera Megapixels",
+                                "value": "12 megapixels",
+                                "values": [
+                                    "12 megapixels"
+                                ]
+                            },
+                            {
+                                "name": "Included Software",
+                                "value": "Camera, Photos, Messages, FaceTime, Mail, Music, Safari, Maps, Siri, Calendar, iTunes Store, App Store, Notes, Voice Memos, Contacts, Books, Home, Reminders, Stocks, Clock, TV, News, Photo Booth, Podcasts and more",
+                                "values": [
+                                    "Camera, Photos, Messages, FaceTime, Mail, Music, Safari, Maps, Siri, Calendar, iTunes Store, App Store, Notes, Voice Memos, Contacts, Books, Home, Reminders, Stocks, Clock, TV, News, Photo Booth, Podcasts and more"
+                                ]
+                            },
+                            {
+                                "name": "Bluetooth Version",
+                                "value": "5.0",
+                                "values": [
+                                    "5.0"
+                                ]
+                            },
+                            {
+                                "name": "Headphone Jack",
+                                "value": "No",
+                                "values": [
+                                    "No"
+                                ]
+                            },
+                            {
+                                "name": "Battery Type",
+                                "value": "Lithium-polymer",
+                                "values": [
+                                    "Lithium-polymer"
+                                ]
+                            },
+                            {
+                                "name": "Keyboard Included",
+                                "value": "No",
+                                "values": [
+                                    "No"
+                                ]
+                            },
+                            {
+                                "name": "Operating System",
+                                "value": "Apple iPadOS",
+                                "values": [
+                                    "Apple iPadOS"
+                                ]
+                            },
+                            {
+                                "name": "Processor Brand",
+                                "value": "Apple",
+                                "values": [
+                                    "Apple"
+                                ]
+                            },
+                            {
+                                "name": "Manufacturer's Warranty - Parts",
+                                "value": "1 year",
+                                "values": [
+                                    "1 year"
+                                ]
+                            },
+                            {
+                                "name": "Voice Assistant Built-in",
+                                "value": "Siri",
+                                "values": [
+                                    "Siri"
+                                ]
+                            },
+                            {
+                                "name": "Interface(s)",
+                                "value": "USB Type C",
+                                "values": [
+                                    "USB Type C"
+                                ]
+                            },
+                            {
+                                "name": "Color",
+                                "value": "Space Gray",
+                                "values": [
+                                    "Space Gray"
+                                ]
+                            },
+                            {
+                                "name": "Product Width",
+                                "value": "8.46 inches",
+                                "values": [
+                                    "8.46 inches"
+                                ]
+                            },
+                            {
+                                "name": "Rear Facing Camera Video Resolution",
+                                "value": "4K video recording at 24 fps, 25 fps, 30 fps, or 60 fps",
+                                "values": [
+                                    "4K video recording at 24 fps, 25 fps, 30 fps, or 60 fps"
+                                ]
+                            },
+                            {
+                                "name": "Security Features",
+                                "value": "Facial recognition",
+                                "values": [
+                                    "Facial recognition",
+                                    "Password Protection",
+                                    "Touch ID sensor"
+                                ]
+                            },
+                            {
+                                "name": "Compatible Wireless Standard(s)",
+                                "value": "Wireless-AX",
+                                "values": [
+                                    "Wireless-AX"
+                                ]
+                            },
+                            {
+                                "name": "Total Storage Capacity",
+                                "value": "128 gigabytes",
+                                "values": [
+                                    "128 gigabytes"
+                                ]
+                            },
+                            {
+                                "name": "Display Type",
+                                "value": "LED",
+                                "values": [
+                                    "LED"
+                                ]
+                            },
+                            {
+                                "name": "Color Category",
+                                "value": "Space Gray",
+                                "values": [
+                                    "Space Gray"
+                                ]
+                            },
+                            {
+                                "name": "Model Number",
+                                "value": "MHNF3LL/A",
+                                "values": [
+                                    "MHNF3LL/A"
+                                ]
+                            },
+                            {
+                                "name": "Network Connectivity",
+                                "value": "None",
+                                "values": [
+                                    "None"
+                                ]
+                            },
+                            {
+                                "name": "Model Family",
+                                "value": "Apple iPad Pro",
+                                "values": [
+                                    "Apple iPad Pro"
+                                ]
+                            },
+                            {
+                                "name": "Product Weight",
+                                "value": "24.1 ounces",
+                                "values": [
+                                    "24.1 ounces"
+                                ]
+                            },
+                            {
+                                "name": "Product Name",
+                                "value": "12.9-Inch iPad Pro with Wi-Fi - 128GB",
+                                "values": [
+                                    "12.9-Inch iPad Pro with Wi-Fi - 128GB"
+                                ]
+                            },
+                            {
+                                "name": "Product Depth",
+                                "value": "0.25 inches",
+                                "values": [
+                                    "0.25 inches"
+                                ]
+                            },
+                            {
+                                "name": "ENERGY STAR Certified",
+                                "value": "Yes",
+                                "values": [
+                                    "Yes"
+                                ]
+                            },
+                            {
+                                "name": "Product Height",
+                                "value": "11.04 inches",
+                                "values": [
+                                    "11.04 inches"
+                                ]
+                            },
+                            {
+                                "name": "GPS Enabled",
+                                "value": "Yes",
+                                "values": [
+                                    "Yes"
+                                ]
+                            },
+                            {
+                                "name": "Manufacturer's Warranty - Labor",
+                                "value": "1 year",
+                                "values": [
+                                    "1 year"
+                                ]
+                            },
+                            {
+                                "name": "Brand",
+                                "value": "Apple",
+                                "values": [
+                                    "Apple"
+                                ]
+                            },
+                            {
+                                "name": "Processor Model",
+                                "value": "Apple M1 chip, 16-core Neural Engine",
+                                "values": [
+                                    "Apple M1 chip, 16-core Neural Engine"
+                                ]
+                            },
+                            {
+                                "name": "Wake Word",
+                                "value": "Hey Siri",
+                                "values": [
+                                    "Hey Siri"
+                                ]
+                            },
+                            {
+                                "name": "Charging Interface(s)",
+                                "value": "USB Type C",
+                                "values": [
+                                    "USB Type C"
+                                ]
+                            },
+                            {
+                                "name": "Year of Release",
+                                "value": "2021",
+                                "values": [
+                                    "2021"
+                                ]
+                            },
+                            {
+                                "name": "Screen Size",
+                                "value": "12.9 inches",
+                                "values": [
+                                    "12.9 inches"
+                                ]
+                            },
+                            {
+                                "name": "Operating System Compatibility",
+                                "value": "Apple iOS",
+                                "values": [
+                                    "Apple iOS"
+                                ]
+                            },
+                            {
+                                "name": "Mobile Payment Service Supported",
+                                "value": "Apple Pay",
+                                "values": [
+                                    "Apple Pay"
+                                ]
+                            },
+                            {
+                                "name": "Wireless Connectivity",
+                                "value": "Wi-Fi",
+                                "values": [
+                                    "Wi-Fi",
+                                    "Bluetooth"
+                                ]
+                            },
+                            {
+                                "name": "Screen Resolution",
+                                "value": "2732 x 2048",
+                                "values": [
+                                    "2732 x 2048"
+                                ]
+                            }
+                        ],
+                        "image": "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/4263/4263701_sd.jpg",
+                        "longDescription": "iPad Pro features the powerful Apple M1 chip for next-level performance and all-day battery life.&#179; An immersive 12.9-inch Liquid Retina XDR display for viewing and editing HDR photos and videos.&#185; And a front camera with Center Stage keeps you in frame automatically during video calls. iPad Pro has pro cameras and a LiDAR Scanner for stunning photos, videos, and immersive AR. Thunderbolt for connecting to high-performance accessories. And you can add Apple Pencil for note-taking, drawing, and marking up documents, and the Magic Keyboard for a responsive typing experience and trackpad.&#8308;",
+                        "manufacturer": "Apple",
+                        "modelNumber": "MHNF3LL/A",
+                        "name": "Apple - 12.9-Inch iPad Pro with Wi-Fi - 128GB - Space Gray",
+                        "regularPrice": 1099.99,
+                        "salePrice": 1099.99,
+                        "sku": 4263701,
+                        "thumbnailImage": "https://pisces.bbystatic.com/prescaled/108/54/image2/BestBuy_US/images/products/4263/4263701_sd.jpg",
+                        "type": "HardGood",
+                        "url": "https://api.bestbuy.com/click/-/4263701/pdp"
+                    },
+                    {
+                        "categoryPath": [
+                            {
+                                "id": "cat00000",
+                                "name": "Best Buy"
+                            },
+                            {
+                                "id": "abcat0500000",
+                                "name": "Computers & Tablets"
+                            },
+                            {
+                                "id": "pcmcat209000050006",
+                                "name": "Tablets"
+                            },
+                            {
+                                "id": "pcmcat209000050008",
+                                "name": "All Tablets"
+                            }
+                        ],
+                        "color": "Space Gray",
+                        "condition": "New",
+                        "description": null,
+                        "details": [
+                            {
+                                "name": "Screen Type",
+                                "value": "Retina Display",
+                                "values": [
+                                    "Retina Display"
+                                ]
+                            },
+                            {
+                                "name": "Front Facing Camera Megapixels",
+                                "value": "12 megapixels",
+                                "values": [
+                                    "12 megapixels"
+                                ]
+                            },
+                            {
+                                "name": "Expandable Memory Compatibility",
+                                "value": "None",
+                                "values": [
+                                    "None"
+                                ]
+                            },
+                            {
+                                "name": "Front Facing Camera Video Resolution",
+                                "value": "1080p",
+                                "values": [
+                                    "1080p"
+                                ]
+                            },
+                            {
+                                "name": "Front-Facing Camera",
+                                "value": "Yes",
+                                "values": [
+                                    "Yes"
+                                ]
+                            },
+                            {
+                                "name": "Stylus Included",
+                                "value": "No",
+                                "values": [
+                                    "No"
+                                ]
+                            },
+                            {
+                                "name": "Rear-Facing Camera",
+                                "value": "Yes",
+                                "values": [
+                                    "Yes"
+                                ]
+                            },
+                            {
+                                "name": "System Memory (RAM)",
+                                "value": "8 gigabytes",
+                                "values": [
+                                    "8 gigabytes"
+                                ]
+                            },
+                            {
+                                "name": "Rear Facing Camera Megapixels",
+                                "value": "12 megapixels",
+                                "values": [
+                                    "12 megapixels"
+                                ]
+                            },
+                            {
+                                "name": "Included Software",
+                                "value": "Camera, Photos, Messages, FaceTime, Mail, Music, Safari, Maps, Siri, Calendar, iTunes Store, App Store, Notes, Voice Memos, Contacts, Books, Home, Reminders, Stocks, Clock, TV, News, Photo Booth, Podcasts and more",
+                                "values": [
+                                    "Camera, Photos, Messages, FaceTime, Mail, Music, Safari, Maps, Siri, Calendar, iTunes Store, App Store, Notes, Voice Memos, Contacts, Books, Home, Reminders, Stocks, Clock, TV, News, Photo Booth, Podcasts and more"
+                                ]
+                            },
+                            {
+                                "name": "Bluetooth Version",
+                                "value": "5.0",
+                                "values": [
+                                    "5.0"
+                                ]
+                            },
+                            {
+                                "name": "Headphone Jack",
+                                "value": "No",
+                                "values": [
+                                    "No"
+                                ]
+                            },
+                            {
+                                "name": "Battery Type",
+                                "value": "Lithium-polymer",
+                                "values": [
+                                    "Lithium-polymer"
+                                ]
+                            },
+                            {
+                                "name": "Keyboard Included",
+                                "value": "No",
+                                "values": [
+                                    "No"
+                                ]
+                            },
+                            {
+                                "name": "Operating System",
+                                "value": "Apple iPadOS",
+                                "values": [
+                                    "Apple iPadOS"
+                                ]
+                            },
+                            {
+                                "name": "Processor Brand",
+                                "value": "Apple",
+                                "values": [
+                                    "Apple"
+                                ]
+                            },
+                            {
+                                "name": "Manufacturer's Warranty - Parts",
+                                "value": "1 year",
+                                "values": [
+                                    "1 year"
+                                ]
+                            },
+                            {
+                                "name": "Voice Assistant Built-in",
+                                "value": "Siri",
+                                "values": [
+                                    "Siri"
+                                ]
+                            },
+                            {
+                                "name": "Interface(s)",
+                                "value": "USB Type C",
+                                "values": [
+                                    "USB Type C"
+                                ]
+                            },
+                            {
+                                "name": "Color",
+                                "value": "Space Gray",
+                                "values": [
+                                    "Space Gray"
+                                ]
+                            },
+                            {
+                                "name": "Product Width",
+                                "value": "8.46 inches",
+                                "values": [
+                                    "8.46 inches"
+                                ]
+                            },
+                            {
+                                "name": "Rear Facing Camera Video Resolution",
+                                "value": "4K video recording at 24 fps, 25 fps, 30 fps, or 60 fps",
+                                "values": [
+                                    "4K video recording at 24 fps, 25 fps, 30 fps, or 60 fps"
+                                ]
+                            },
+                            {
+                                "name": "Security Features",
+                                "value": "Facial recognition",
+                                "values": [
+                                    "Facial recognition",
+                                    "Password Protection",
+                                    "Touch ID sensor"
+                                ]
+                            },
+                            {
+                                "name": "Compatible Wireless Standard(s)",
+                                "value": "Wireless-AX",
+                                "values": [
+                                    "Wireless-AX"
+                                ]
+                            },
+                            {
+                                "name": "Total Storage Capacity",
+                                "value": "128 gigabytes",
+                                "values": [
+                                    "128 gigabytes"
+                                ]
+                            },
+                            {
+                                "name": "Display Type",
+                                "value": "LED",
+                                "values": [
+                                    "LED"
+                                ]
+                            },
+                            {
+                                "name": "Color Category",
+                                "value": "Space Gray",
+                                "values": [
+                                    "Space Gray"
+                                ]
+                            },
+                            {
+                                "name": "Model Number",
+                                "value": "MHNF3LL/A",
+                                "values": [
+                                    "MHNF3LL/A"
+                                ]
+                            },
+                            {
+                                "name": "Network Connectivity",
+                                "value": "None",
+                                "values": [
+                                    "None"
+                                ]
+                            },
+                            {
+                                "name": "Model Family",
+                                "value": "Apple iPad Pro",
+                                "values": [
+                                    "Apple iPad Pro"
+                                ]
+                            },
+                            {
+                                "name": "Product Weight",
+                                "value": "24.1 ounces",
+                                "values": [
+                                    "24.1 ounces"
+                                ]
+                            },
+                            {
+                                "name": "Product Name",
+                                "value": "12.9-Inch iPad Pro with Wi-Fi - 128GB",
+                                "values": [
+                                    "12.9-Inch iPad Pro with Wi-Fi - 128GB"
+                                ]
+                            },
+                            {
+                                "name": "Product Depth",
+                                "value": "0.25 inches",
+                                "values": [
+                                    "0.25 inches"
+                                ]
+                            },
+                            {
+                                "name": "ENERGY STAR Certified",
+                                "value": "Yes",
+                                "values": [
+                                    "Yes"
+                                ]
+                            },
+                            {
+                                "name": "Product Height",
+                                "value": "11.04 inches",
+                                "values": [
+                                    "11.04 inches"
+                                ]
+                            },
+                            {
+                                "name": "GPS Enabled",
+                                "value": "Yes",
+                                "values": [
+                                    "Yes"
+                                ]
+                            },
+                            {
+                                "name": "Manufacturer's Warranty - Labor",
+                                "value": "1 year",
+                                "values": [
+                                    "1 year"
+                                ]
+                            },
+                            {
+                                "name": "Brand",
+                                "value": "Apple",
+                                "values": [
+                                    "Apple"
+                                ]
+                            },
+                            {
+                                "name": "Processor Model",
+                                "value": "Apple M1 chip, 16-core Neural Engine",
+                                "values": [
+                                    "Apple M1 chip, 16-core Neural Engine"
+                                ]
+                            },
+                            {
+                                "name": "Wake Word",
+                                "value": "Hey Siri",
+                                "values": [
+                                    "Hey Siri"
+                                ]
+                            },
+                            {
+                                "name": "Charging Interface(s)",
+                                "value": "USB Type C",
+                                "values": [
+                                    "USB Type C"
+                                ]
+                            },
+                            {
+                                "name": "Year of Release",
+                                "value": "2021",
+                                "values": [
+                                    "2021"
+                                ]
+                            },
+                            {
+                                "name": "Screen Size",
+                                "value": "12.9 inches",
+                                "values": [
+                                    "12.9 inches"
+                                ]
+                            },
+                            {
+                                "name": "Operating System Compatibility",
+                                "value": "Apple iOS",
+                                "values": [
+                                    "Apple iOS"
+                                ]
+                            },
+                            {
+                                "name": "Mobile Payment Service Supported",
+                                "value": "Apple Pay",
+                                "values": [
+                                    "Apple Pay"
+                                ]
+                            },
+                            {
+                                "name": "Wireless Connectivity",
+                                "value": "Wi-Fi",
+                                "values": [
+                                    "Wi-Fi",
+                                    "Bluetooth"
+                                ]
+                            },
+                            {
+                                "name": "Screen Resolution",
+                                "value": "2732 x 2048",
+                                "values": [
+                                    "2732 x 2048"
+                                ]
+                            }
+                        ],
+                        "image": "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/4263/4263701_sd.jpg",
+                        "longDescription": "iPad Pro features the powerful Apple M1 chip for next-level performance and all-day battery life.&#179; An immersive 12.9-inch Liquid Retina XDR display for viewing and editing HDR photos and videos.&#185; And a front camera with Center Stage keeps you in frame automatically during video calls. iPad Pro has pro cameras and a LiDAR Scanner for stunning photos, videos, and immersive AR. Thunderbolt for connecting to high-performance accessories. And you can add Apple Pencil for note-taking, drawing, and marking up documents, and the Magic Keyboard for a responsive typing experience and trackpad.&#8308;",
+                        "manufacturer": "Apple",
+                        "modelNumber": "MHNF3LL/A",
+                        "name": "Apple - 12.9-Inch iPad Pro with Wi-Fi - 128GB - Space Gray",
+                        "regularPrice": 1099.99,
+                        "salePrice": 1099.99,
+                        "sku": 4263701,
+                        "thumbnailImage": "https://pisces.bbystatic.com/prescaled/108/54/image2/BestBuy_US/images/products/4263/4263701_sd.jpg",
+                        "type": "HardGood",
+                        "url": "https://api.bestbuy.com/click/-/4263701/pdp"
+                    }
+                ]
+        },
+        {
+            "number": "2022112466666",
+            "status": 5,
+            "placed_time": "2022-11-24",
+            "delivered_time": "2022-12-20",
+            "payment": "5100910051003189",
+            "items":[
+                {
+                    "name": "Apple - MacBook Pro - 13\" Display with Touch Bar - Intel Core i7 - 8GB Memory - 1TB SSD - Silver",
+                    "sku": 6394471,
+                    "image": "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/6394/6394471_sd.jpg",
+                    "manufacturer": "Apple",
+                    "detail": "Apple MacBook Pro Laptop: Power through the biggest of jobs using this MacBook Pro laptop. Rapid Intel Core i7 processing and 8GB of RAM ensure outstandingly fast speeds for applications, while the 13-inch Retina display ensures maximum vibrancy and detail. This MacBook Pro laptop has lots of high-performance storage for your files and Intel Iris Plus Graphics 645 integrated graphics for easy creative editing.",
+                    "regularPrice": 2199,
+                    "salePrice": 1759.99
+                },
+                {
+                    "name": "Apple - MacBook Pro - 13\" Display with Touch Bar - Intel Core i7 - 8GB Memory - 1TB SSD - Silver",
+                    "sku": 6394471,
+                    "image": "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/6394/6394471_sd.jpg",
+                    "manufacturer": "Apple",
+                    "detail": "Apple MacBook Pro Laptop: Power through the biggest of jobs using this MacBook Pro laptop. Rapid Intel Core i7 processing and 8GB of RAM ensure outstandingly fast speeds for applications, while the 13-inch Retina display ensures maximum vibrancy and detail. This MacBook Pro laptop has lots of high-performance storage for your files and Intel Iris Plus Graphics 645 integrated graphics for easy creative editing.",
+                    "regularPrice": 2199,
+                    "salePrice": 1759.99
+                },
+                {
+                    "categoryPath": [
+                        {
+                            "id": "cat00000",
+                            "name": "Best Buy"
+                        },
+                        {
+                            "id": "abcat0500000",
+                            "name": "Computers & Tablets"
+                        },
+                        {
+                            "id": "pcmcat209000050006",
+                            "name": "Tablets"
+                        },
+                        {
+                            "id": "pcmcat209000050008",
+                            "name": "All Tablets"
+                        }
+                    ],
+                    "color": "Space Gray",
+                    "condition": "New",
+                    "description": null,
+                    "details": [
+                        {
+                            "name": "Screen Type",
+                            "value": "Retina Display",
+                            "values": [
+                                "Retina Display"
+                            ]
+                        },
+                        {
+                            "name": "Front Facing Camera Megapixels",
+                            "value": "12 megapixels",
+                            "values": [
+                                "12 megapixels"
+                            ]
+                        },
+                        {
+                            "name": "Expandable Memory Compatibility",
+                            "value": "None",
+                            "values": [
+                                "None"
+                            ]
+                        },
+                        {
+                            "name": "Front Facing Camera Video Resolution",
+                            "value": "1080p",
+                            "values": [
+                                "1080p"
+                            ]
+                        },
+                        {
+                            "name": "Front-Facing Camera",
+                            "value": "Yes",
+                            "values": [
+                                "Yes"
+                            ]
+                        },
+                        {
+                            "name": "Stylus Included",
+                            "value": "No",
+                            "values": [
+                                "No"
+                            ]
+                        },
+                        {
+                            "name": "Rear-Facing Camera",
+                            "value": "Yes",
+                            "values": [
+                                "Yes"
+                            ]
+                        },
+                        {
+                            "name": "System Memory (RAM)",
+                            "value": "8 gigabytes",
+                            "values": [
+                                "8 gigabytes"
+                            ]
+                        },
+                        {
+                            "name": "Rear Facing Camera Megapixels",
+                            "value": "12 megapixels",
+                            "values": [
+                                "12 megapixels"
+                            ]
+                        },
+                        {
+                            "name": "Included Software",
+                            "value": "Camera, Photos, Messages, FaceTime, Mail, Music, Safari, Maps, Siri, Calendar, iTunes Store, App Store, Notes, Voice Memos, Contacts, Books, Home, Reminders, Stocks, Clock, TV, News, Photo Booth, Podcasts and more",
+                            "values": [
+                                "Camera, Photos, Messages, FaceTime, Mail, Music, Safari, Maps, Siri, Calendar, iTunes Store, App Store, Notes, Voice Memos, Contacts, Books, Home, Reminders, Stocks, Clock, TV, News, Photo Booth, Podcasts and more"
+                            ]
+                        },
+                        {
+                            "name": "Bluetooth Version",
+                            "value": "5.0",
+                            "values": [
+                                "5.0"
+                            ]
+                        },
+                        {
+                            "name": "Headphone Jack",
+                            "value": "No",
+                            "values": [
+                                "No"
+                            ]
+                        },
+                        {
+                            "name": "Battery Type",
+                            "value": "Lithium-polymer",
+                            "values": [
+                                "Lithium-polymer"
+                            ]
+                        },
+                        {
+                            "name": "Keyboard Included",
+                            "value": "No",
+                            "values": [
+                                "No"
+                            ]
+                        },
+                        {
+                            "name": "Operating System",
+                            "value": "Apple iPadOS",
+                            "values": [
+                                "Apple iPadOS"
+                            ]
+                        },
+                        {
+                            "name": "Processor Brand",
+                            "value": "Apple",
+                            "values": [
+                                "Apple"
+                            ]
+                        },
+                        {
+                            "name": "Manufacturer's Warranty - Parts",
+                            "value": "1 year",
+                            "values": [
+                                "1 year"
+                            ]
+                        },
+                        {
+                            "name": "Voice Assistant Built-in",
+                            "value": "Siri",
+                            "values": [
+                                "Siri"
+                            ]
+                        },
+                        {
+                            "name": "Interface(s)",
+                            "value": "USB Type C",
+                            "values": [
+                                "USB Type C"
+                            ]
+                        },
+                        {
+                            "name": "Color",
+                            "value": "Space Gray",
+                            "values": [
+                                "Space Gray"
+                            ]
+                        },
+                        {
+                            "name": "Product Width",
+                            "value": "8.46 inches",
+                            "values": [
+                                "8.46 inches"
+                            ]
+                        },
+                        {
+                            "name": "Rear Facing Camera Video Resolution",
+                            "value": "4K video recording at 24 fps, 25 fps, 30 fps, or 60 fps",
+                            "values": [
+                                "4K video recording at 24 fps, 25 fps, 30 fps, or 60 fps"
+                            ]
+                        },
+                        {
+                            "name": "Security Features",
+                            "value": "Facial recognition",
+                            "values": [
+                                "Facial recognition",
+                                "Password Protection",
+                                "Touch ID sensor"
+                            ]
+                        },
+                        {
+                            "name": "Compatible Wireless Standard(s)",
+                            "value": "Wireless-AX",
+                            "values": [
+                                "Wireless-AX"
+                            ]
+                        },
+                        {
+                            "name": "Total Storage Capacity",
+                            "value": "128 gigabytes",
+                            "values": [
+                                "128 gigabytes"
+                            ]
+                        },
+                        {
+                            "name": "Display Type",
+                            "value": "LED",
+                            "values": [
+                                "LED"
+                            ]
+                        },
+                        {
+                            "name": "Color Category",
+                            "value": "Space Gray",
+                            "values": [
+                                "Space Gray"
+                            ]
+                        },
+                        {
+                            "name": "Model Number",
+                            "value": "MHNF3LL/A",
+                            "values": [
+                                "MHNF3LL/A"
+                            ]
+                        },
+                        {
+                            "name": "Network Connectivity",
+                            "value": "None",
+                            "values": [
+                                "None"
+                            ]
+                        },
+                        {
+                            "name": "Model Family",
+                            "value": "Apple iPad Pro",
+                            "values": [
+                                "Apple iPad Pro"
+                            ]
+                        },
+                        {
+                            "name": "Product Weight",
+                            "value": "24.1 ounces",
+                            "values": [
+                                "24.1 ounces"
+                            ]
+                        },
+                        {
+                            "name": "Product Name",
+                            "value": "12.9-Inch iPad Pro with Wi-Fi - 128GB",
+                            "values": [
+                                "12.9-Inch iPad Pro with Wi-Fi - 128GB"
+                            ]
+                        },
+                        {
+                            "name": "Product Depth",
+                            "value": "0.25 inches",
+                            "values": [
+                                "0.25 inches"
+                            ]
+                        },
+                        {
+                            "name": "ENERGY STAR Certified",
+                            "value": "Yes",
+                            "values": [
+                                "Yes"
+                            ]
+                        },
+                        {
+                            "name": "Product Height",
+                            "value": "11.04 inches",
+                            "values": [
+                                "11.04 inches"
+                            ]
+                        },
+                        {
+                            "name": "GPS Enabled",
+                            "value": "Yes",
+                            "values": [
+                                "Yes"
+                            ]
+                        },
+                        {
+                            "name": "Manufacturer's Warranty - Labor",
+                            "value": "1 year",
+                            "values": [
+                                "1 year"
+                            ]
+                        },
+                        {
+                            "name": "Brand",
+                            "value": "Apple",
+                            "values": [
+                                "Apple"
+                            ]
+                        },
+                        {
+                            "name": "Processor Model",
+                            "value": "Apple M1 chip, 16-core Neural Engine",
+                            "values": [
+                                "Apple M1 chip, 16-core Neural Engine"
+                            ]
+                        },
+                        {
+                            "name": "Wake Word",
+                            "value": "Hey Siri",
+                            "values": [
+                                "Hey Siri"
+                            ]
+                        },
+                        {
+                            "name": "Charging Interface(s)",
+                            "value": "USB Type C",
+                            "values": [
+                                "USB Type C"
+                            ]
+                        },
+                        {
+                            "name": "Year of Release",
+                            "value": "2021",
+                            "values": [
+                                "2021"
+                            ]
+                        },
+                        {
+                            "name": "Screen Size",
+                            "value": "12.9 inches",
+                            "values": [
+                                "12.9 inches"
+                            ]
+                        },
+                        {
+                            "name": "Operating System Compatibility",
+                            "value": "Apple iOS",
+                            "values": [
+                                "Apple iOS"
+                            ]
+                        },
+                        {
+                            "name": "Mobile Payment Service Supported",
+                            "value": "Apple Pay",
+                            "values": [
+                                "Apple Pay"
+                            ]
+                        },
+                        {
+                            "name": "Wireless Connectivity",
+                            "value": "Wi-Fi",
+                            "values": [
+                                "Wi-Fi",
+                                "Bluetooth"
+                            ]
+                        },
+                        {
+                            "name": "Screen Resolution",
+                            "value": "2732 x 2048",
+                            "values": [
+                                "2732 x 2048"
+                            ]
+                        }
+                    ],
+                    "image": "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/4263/4263701_sd.jpg",
+                    "longDescription": "iPad Pro features the powerful Apple M1 chip for next-level performance and all-day battery life.&#179; An immersive 12.9-inch Liquid Retina XDR display for viewing and editing HDR photos and videos.&#185; And a front camera with Center Stage keeps you in frame automatically during video calls. iPad Pro has pro cameras and a LiDAR Scanner for stunning photos, videos, and immersive AR. Thunderbolt for connecting to high-performance accessories. And you can add Apple Pencil for note-taking, drawing, and marking up documents, and the Magic Keyboard for a responsive typing experience and trackpad.&#8308;",
+                    "manufacturer": "Apple",
+                    "modelNumber": "MHNF3LL/A",
+                    "name": "Apple - 12.9-Inch iPad Pro with Wi-Fi - 128GB - Space Gray",
+                    "regularPrice": 1099.99,
+                    "salePrice": 1099.99,
+                    "sku": 4263701,
+                    "thumbnailImage": "https://pisces.bbystatic.com/prescaled/108/54/image2/BestBuy_US/images/products/4263/4263701_sd.jpg",
+                    "type": "HardGood",
+                    "url": "https://api.bestbuy.com/click/-/4263701/pdp"
+                },
+                {
+                    "categoryPath": [
+                        {
+                            "id": "cat00000",
+                            "name": "Best Buy"
+                        },
+                        {
+                            "id": "abcat0500000",
+                            "name": "Computers & Tablets"
+                        },
+                        {
+                            "id": "pcmcat209000050006",
+                            "name": "Tablets"
+                        },
+                        {
+                            "id": "pcmcat209000050008",
+                            "name": "All Tablets"
+                        }
+                    ],
+                    "color": "Space Gray",
+                    "condition": "New",
+                    "description": null,
+                    "details": [
+                        {
+                            "name": "Screen Type",
+                            "value": "Retina Display",
+                            "values": [
+                                "Retina Display"
+                            ]
+                        },
+                        {
+                            "name": "Front Facing Camera Megapixels",
+                            "value": "12 megapixels",
+                            "values": [
+                                "12 megapixels"
+                            ]
+                        },
+                        {
+                            "name": "Expandable Memory Compatibility",
+                            "value": "None",
+                            "values": [
+                                "None"
+                            ]
+                        },
+                        {
+                            "name": "Front Facing Camera Video Resolution",
+                            "value": "1080p",
+                            "values": [
+                                "1080p"
+                            ]
+                        },
+                        {
+                            "name": "Front-Facing Camera",
+                            "value": "Yes",
+                            "values": [
+                                "Yes"
+                            ]
+                        },
+                        {
+                            "name": "Stylus Included",
+                            "value": "No",
+                            "values": [
+                                "No"
+                            ]
+                        },
+                        {
+                            "name": "Rear-Facing Camera",
+                            "value": "Yes",
+                            "values": [
+                                "Yes"
+                            ]
+                        },
+                        {
+                            "name": "System Memory (RAM)",
+                            "value": "8 gigabytes",
+                            "values": [
+                                "8 gigabytes"
+                            ]
+                        },
+                        {
+                            "name": "Rear Facing Camera Megapixels",
+                            "value": "12 megapixels",
+                            "values": [
+                                "12 megapixels"
+                            ]
+                        },
+                        {
+                            "name": "Included Software",
+                            "value": "Camera, Photos, Messages, FaceTime, Mail, Music, Safari, Maps, Siri, Calendar, iTunes Store, App Store, Notes, Voice Memos, Contacts, Books, Home, Reminders, Stocks, Clock, TV, News, Photo Booth, Podcasts and more",
+                            "values": [
+                                "Camera, Photos, Messages, FaceTime, Mail, Music, Safari, Maps, Siri, Calendar, iTunes Store, App Store, Notes, Voice Memos, Contacts, Books, Home, Reminders, Stocks, Clock, TV, News, Photo Booth, Podcasts and more"
+                            ]
+                        },
+                        {
+                            "name": "Bluetooth Version",
+                            "value": "5.0",
+                            "values": [
+                                "5.0"
+                            ]
+                        },
+                        {
+                            "name": "Headphone Jack",
+                            "value": "No",
+                            "values": [
+                                "No"
+                            ]
+                        },
+                        {
+                            "name": "Battery Type",
+                            "value": "Lithium-polymer",
+                            "values": [
+                                "Lithium-polymer"
+                            ]
+                        },
+                        {
+                            "name": "Keyboard Included",
+                            "value": "No",
+                            "values": [
+                                "No"
+                            ]
+                        },
+                        {
+                            "name": "Operating System",
+                            "value": "Apple iPadOS",
+                            "values": [
+                                "Apple iPadOS"
+                            ]
+                        },
+                        {
+                            "name": "Processor Brand",
+                            "value": "Apple",
+                            "values": [
+                                "Apple"
+                            ]
+                        },
+                        {
+                            "name": "Manufacturer's Warranty - Parts",
+                            "value": "1 year",
+                            "values": [
+                                "1 year"
+                            ]
+                        },
+                        {
+                            "name": "Voice Assistant Built-in",
+                            "value": "Siri",
+                            "values": [
+                                "Siri"
+                            ]
+                        },
+                        {
+                            "name": "Interface(s)",
+                            "value": "USB Type C",
+                            "values": [
+                                "USB Type C"
+                            ]
+                        },
+                        {
+                            "name": "Color",
+                            "value": "Space Gray",
+                            "values": [
+                                "Space Gray"
+                            ]
+                        },
+                        {
+                            "name": "Product Width",
+                            "value": "8.46 inches",
+                            "values": [
+                                "8.46 inches"
+                            ]
+                        },
+                        {
+                            "name": "Rear Facing Camera Video Resolution",
+                            "value": "4K video recording at 24 fps, 25 fps, 30 fps, or 60 fps",
+                            "values": [
+                                "4K video recording at 24 fps, 25 fps, 30 fps, or 60 fps"
+                            ]
+                        },
+                        {
+                            "name": "Security Features",
+                            "value": "Facial recognition",
+                            "values": [
+                                "Facial recognition",
+                                "Password Protection",
+                                "Touch ID sensor"
+                            ]
+                        },
+                        {
+                            "name": "Compatible Wireless Standard(s)",
+                            "value": "Wireless-AX",
+                            "values": [
+                                "Wireless-AX"
+                            ]
+                        },
+                        {
+                            "name": "Total Storage Capacity",
+                            "value": "128 gigabytes",
+                            "values": [
+                                "128 gigabytes"
+                            ]
+                        },
+                        {
+                            "name": "Display Type",
+                            "value": "LED",
+                            "values": [
+                                "LED"
+                            ]
+                        },
+                        {
+                            "name": "Color Category",
+                            "value": "Space Gray",
+                            "values": [
+                                "Space Gray"
+                            ]
+                        },
+                        {
+                            "name": "Model Number",
+                            "value": "MHNF3LL/A",
+                            "values": [
+                                "MHNF3LL/A"
+                            ]
+                        },
+                        {
+                            "name": "Network Connectivity",
+                            "value": "None",
+                            "values": [
+                                "None"
+                            ]
+                        },
+                        {
+                            "name": "Model Family",
+                            "value": "Apple iPad Pro",
+                            "values": [
+                                "Apple iPad Pro"
+                            ]
+                        },
+                        {
+                            "name": "Product Weight",
+                            "value": "24.1 ounces",
+                            "values": [
+                                "24.1 ounces"
+                            ]
+                        },
+                        {
+                            "name": "Product Name",
+                            "value": "12.9-Inch iPad Pro with Wi-Fi - 128GB",
+                            "values": [
+                                "12.9-Inch iPad Pro with Wi-Fi - 128GB"
+                            ]
+                        },
+                        {
+                            "name": "Product Depth",
+                            "value": "0.25 inches",
+                            "values": [
+                                "0.25 inches"
+                            ]
+                        },
+                        {
+                            "name": "ENERGY STAR Certified",
+                            "value": "Yes",
+                            "values": [
+                                "Yes"
+                            ]
+                        },
+                        {
+                            "name": "Product Height",
+                            "value": "11.04 inches",
+                            "values": [
+                                "11.04 inches"
+                            ]
+                        },
+                        {
+                            "name": "GPS Enabled",
+                            "value": "Yes",
+                            "values": [
+                                "Yes"
+                            ]
+                        },
+                        {
+                            "name": "Manufacturer's Warranty - Labor",
+                            "value": "1 year",
+                            "values": [
+                                "1 year"
+                            ]
+                        },
+                        {
+                            "name": "Brand",
+                            "value": "Apple",
+                            "values": [
+                                "Apple"
+                            ]
+                        },
+                        {
+                            "name": "Processor Model",
+                            "value": "Apple M1 chip, 16-core Neural Engine",
+                            "values": [
+                                "Apple M1 chip, 16-core Neural Engine"
+                            ]
+                        },
+                        {
+                            "name": "Wake Word",
+                            "value": "Hey Siri",
+                            "values": [
+                                "Hey Siri"
+                            ]
+                        },
+                        {
+                            "name": "Charging Interface(s)",
+                            "value": "USB Type C",
+                            "values": [
+                                "USB Type C"
+                            ]
+                        },
+                        {
+                            "name": "Year of Release",
+                            "value": "2021",
+                            "values": [
+                                "2021"
+                            ]
+                        },
+                        {
+                            "name": "Screen Size",
+                            "value": "12.9 inches",
+                            "values": [
+                                "12.9 inches"
+                            ]
+                        },
+                        {
+                            "name": "Operating System Compatibility",
+                            "value": "Apple iOS",
+                            "values": [
+                                "Apple iOS"
+                            ]
+                        },
+                        {
+                            "name": "Mobile Payment Service Supported",
+                            "value": "Apple Pay",
+                            "values": [
+                                "Apple Pay"
+                            ]
+                        },
+                        {
+                            "name": "Wireless Connectivity",
+                            "value": "Wi-Fi",
+                            "values": [
+                                "Wi-Fi",
+                                "Bluetooth"
+                            ]
+                        },
+                        {
+                            "name": "Screen Resolution",
+                            "value": "2732 x 2048",
+                            "values": [
+                                "2732 x 2048"
+                            ]
+                        }
+                    ],
+                    "image": "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/4263/4263701_sd.jpg",
+                    "longDescription": "iPad Pro features the powerful Apple M1 chip for next-level performance and all-day battery life.&#179; An immersive 12.9-inch Liquid Retina XDR display for viewing and editing HDR photos and videos.&#185; And a front camera with Center Stage keeps you in frame automatically during video calls. iPad Pro has pro cameras and a LiDAR Scanner for stunning photos, videos, and immersive AR. Thunderbolt for connecting to high-performance accessories. And you can add Apple Pencil for note-taking, drawing, and marking up documents, and the Magic Keyboard for a responsive typing experience and trackpad.&#8308;",
+                    "manufacturer": "Apple",
+                    "modelNumber": "MHNF3LL/A",
+                    "name": "Apple - 12.9-Inch iPad Pro with Wi-Fi - 128GB - Space Gray",
+                    "regularPrice": 1099.99,
+                    "salePrice": 1099.99,
+                    "sku": 4263701,
+                    "thumbnailImage": "https://pisces.bbystatic.com/prescaled/108/54/image2/BestBuy_US/images/products/4263/4263701_sd.jpg",
+                    "type": "HardGood",
+                    "url": "https://api.bestbuy.com/click/-/4263701/pdp"
+                }
+            ]
+        }
+    ]
+}
